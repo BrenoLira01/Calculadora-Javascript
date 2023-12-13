@@ -50,5 +50,5 @@ Nome: Francisco Breno Lira Almeida
 Contato: franciscobrenolira@gmail.com
 
 ## Licença
-Este projeto é licenciado sob os termos da [Licença Apache 2.0](./LICENSE).
-Leia o arquivo [LICENSE](./LICENSE) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
+Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE).
+Leia o arquivo [LICENSE](/LICENSE) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
