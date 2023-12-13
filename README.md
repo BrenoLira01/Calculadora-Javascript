@@ -15,7 +15,7 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 
 ## Meu Projeto
 
-![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/main/Calculadora-imagem.png)
+![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Simples-Javascript/master/imagens/Calculadora-imagem.png)
 
 ## Dificuldades Enfrentadas
 A parte mais desafiadora foi a interação entre os botões na implementação JavaScript.
