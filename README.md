@@ -47,7 +47,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e soli
 ## Autor
 Nome: Francisco Breno Lira Almeida
 
-##Contato:
+## Contato
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
 
 ## Licença
