@@ -1,0 +1,67 @@
+ .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 'repeat(4, 1fr)' deixa o grid em quatro colunas. */
+            grid-auto-rows: 80px;
+            gap: 8px; /* Espaço entre os botões. */
+            background-color: #1a1a1a;
+            width: 400px;
+            height: 520px;
+            border-radius: 30px; /* Arredonda as bordas */
+            border: 15px solid #1a1a1a; /* Cor e tamanho da borda. */
+        }
+
+        body {
+            background-image: url('../imagens/background.jpg'); /* inserir imagem de fundo */
+            background-size: cover; /* Faz com que a imagem fique completa na tela. */
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .button {
+            text-align: center;
+            background-color: rgb(57, 57, 59);
+            color: #c2c2c2;
+            border: none; /* Sem bordas nos botões. */
+            cursor: pointer;
+            font: normal 25pt Arial;
+            border-radius: 40px; /* Arredonda os botões. */
+        }
+
+        #tela {
+            grid-column: span 4; /* 'span 4' faz com que a tela ocupe 4 colunas*/
+            text-align: right;
+            padding-right: 30px;
+            background-color: #c2c2c2;
+            color: rgb(0, 0, 0);
+            font: normal 30pt Arial;
+            border-radius: 20px;
+        }
+
+        #botaoZero { /* botão zero ocupa duas colunas na horizontal */
+            grid-column: span 2;
+        }
+        #botaoResultado { /* botão resultado ocupa duas colunas na vertical */
+            grid-row: span 2;
+        }
+
+        /* alterando cor dos botões */
+        #botaoCor1 {   /* botão de divisão / */
+            background-color: #2E2E2E;
+        }
+        #botaoCor2 {   /* botões (*,-,+) */
+            background-color: #013a5e;
+        }
+        #botaoClean {  /* botão de limpar */
+            background-color: #2E2E2E;
+        }
+        #botaoBack {   /* botão de apagar */
+            background-color: #2E2E2E;
+        }
+        #botaoResultado {  /* resultado */
+            background-color: #013a5e;
+        }
