@@ -48,7 +48,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e soli
 Nome: Francisco Breno Lira Almeida
 
 Contato: 
-[![Email](https://camo.githubusercontent.com/b91298c2ca9ef429dc20a8887eca7996dfd6e630c648a62805a17a4743ab9c16/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d736575656d61696c40656d61696c2e636f6d2d3030366265643f7374796c653d666c61742d737175617265266c6f676f3d476d61696c266c6f676f436f6c6f723d7768697465266c696e6b3d6d61696c746f3a64616e696c6f2e73696c76612e73616e746f732e31333132406f75746c6f6f6b2e636f6d)](mailto:franciscobrenolira@gmail.com)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
 
 ## Licença
 Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
