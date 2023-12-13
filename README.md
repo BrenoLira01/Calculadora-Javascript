@@ -10,7 +10,7 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 
 ## Como Usar
 
-1. Acesse o link [aqui]([https://brenolira01.github.io/Calculadora-javascript](https://brenolira01.github.io/Calculadora-Simples-Javascript/)).
+1. Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Simples-Javascript/).
 2. Interaja com a calculadora pressionando os botões.
 
 ## Meu Projeto
