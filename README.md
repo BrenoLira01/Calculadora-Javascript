@@ -1,4 +1,4 @@
-![Imagem titulo](https://i.im.ge/2023/12/13/E3BclT.Calculadora-JavaScript.png)
+![Imagem titulo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/master/imagens/Calculadora-JavaScript-2.png)
 
 ## Introdução
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
@@ -15,7 +15,7 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 
 ## Meu Projeto
 
-![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/main/Calculadora-imagem.png)
+![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/master/imagens/Calculadora-imagem-2.jpg)
 
 ## Dificuldades Enfrentadas
 A parte mais desafiadora foi a interação entre os botões na implementação JavaScript.
@@ -45,7 +45,7 @@ botoesNumericos.forEach(function (button) {
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
 
 ## Autor
-Nome: Francisco Breno Lira Almeida
+Nome: Francisco Breno
 
 ## Contato
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
