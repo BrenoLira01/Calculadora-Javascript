@@ -45,7 +45,7 @@ botoesNumericos.forEach(function (button) {
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
 
 ## Autor
-Nome: Francisco Breno Lira Almeida
+Nome: Francisco Breno
 
 ## Contato
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
