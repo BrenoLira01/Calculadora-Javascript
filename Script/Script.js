@@ -1,30 +1,49 @@
 let tela = document.getElementById("tela");
 
-/* ESCREVER BOTÕES NUMÉRICOS NA TELA.*/
+// ESCREVER NUMÉROS NA TELA.
 let botoesNumericos = document.querySelectorAll(".numero");
 botoesNumericos.forEach(function (button) {
     button.addEventListener("click", function () {
-
+        
         // Apaga o zero no começo da tela.
         if (tela.innerText === "0") {
             tela.innerText = ""
         }
 
-        if (tela.innerText.length < 12) { //  Tamanho máximo de 12 caracteres.
+        //  Tamanho máximo de 12 caracteres.
+        if (tela.innerText.length < 10) {
 
-            tela.innerText += button.innerText.trim(); /* Vai escrever botões na tela.
-                O 'trim' remove espaços em branco extras. */
-
+        // Vai escrever botões na tela. O 'trim' remove espaços em branco extras.
+            tela.innerText += button.innerText.trim();
         }
     });
 });
 
-// ESCREVER BOTÕES DE OPERAÇÃO E VÍRGULA.
-let botoesOperando = document.querySelectorAll(".operando, .virgula");
+// ESCREVER PONTO.
+let botaoPonto = document.querySelectorAll(".ponto");
+botaoPonto.forEach(function (botao) {
+    botao.addEventListener("click", function () {
+
+        // Concatena o zero com ponto.
+        if (tela.innerText === "0") {
+            tela.innerText = tela.innerText += botao.innerText.trim();
+        }
+
+        // Só permite um único ponto na tela.
+        if(tela.innerText.includes(".")) {
+            return;
+        }
+            tela.innerText += botao.innerText.trim();
+    });
+});
+
+// ESCREVER BOTÕES DE OPERAÇÃO.
+let botoesOperando = document.querySelectorAll(".operando");
 botoesOperando.forEach(function (botao) {
     botao.addEventListener("click", function () {
 
-        if (tela.innerText === "0") { // Concatena o zero com botão de operação.
+        // Concatena o zero com botão de operação.
+        if (tela.innerText === "0") {
             tela.innerText = tela.innerText += botao.innerText.trim();
         }
 
@@ -32,14 +51,15 @@ botoesOperando.forEach(function (botao) {
         let ultimoCaractere = tela.innerText.slice(-1);
 
         // Verificar se ele é um operador.
-        let ultimoCaractereEOperador = "+-x/.".includes(ultimoCaractere);
+        let ultimoCaractereEOperador = "+-x/".includes(ultimoCaractere);
 
+         // Caso não seja, adicioma um operador.
         if (!ultimoCaractereEOperador) {
-            // Caso não seja, adicioma um operador.
             tela.innerText += botao.innerText.trim();
         }
+
+        // permite substituir um operador por outro.
         else {
-            // permite substituir um operador por outro.
             tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
             tela.innerText += botao.innerText.trim();
         }
@@ -48,50 +68,57 @@ botoesOperando.forEach(function (botao) {
 
 //LIMPAR TELA
 let limparTela = document.getElementById("botaoClean");
-
 limparTela.addEventListener("click", limpar);
 
 function limpar() {
     tela.innerText = "0"
 };
 
-//APAGAR
+//APAGAR UM CARACTERE
 let apagarNumero = document.getElementById("botaoBack");
-
 apagarNumero.addEventListener("click", apagar);
 
 function apagar() {
-    tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1); // vai apagar o último caractere na tela.
-    if (tela.innerText === "") { // Se a tela estiver vazia adicona um 0.
+    tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
+
+    if (tela.innerText === "") {
         tela.innerText = "0"
     }
 };
 
 //fUNÇÃO CALCULAR
 let calcularNumero = document.getElementById("botaoResultado");
-
 calcularNumero.addEventListener("click", calcular);
 
 function calcular() {
+
     let tela = document.getElementById("tela").innerHTML;
-
     let ultimoCaractere = tela.slice(-1);
-
     let ultimoCaractereEOperador = "+-x/".includes(ultimoCaractere);
 
-    const novaString = tela.replace(/x/g, "*");
-    console.log(novaString); // Troca o x por * para o eval fazer o calculo.
+    // Troca o 'x' por '*'
+    let novaString = tela.replace(/x/g, "*");
 
+    // Se o último caractere NÃO for um operador o calculo será feito.
     if (!ultimoCaractereEOperador) {
-        document.getElementById("tela").innerHTML = eval(novaString);
-        /* Se o último caractere NÃO for um operador o 'eval' vai fazer o calculo normalmente. */
+        let calcular = new Function('return ' + novaString);
+        let resultado = calcular();
+
+        document.getElementById("tela").innerHTML = resultado;
+
+        //Quando ultrapassar 11 caracteres, é feito uma notação ciêntifica.
+        let resultadoString = resultado.toString();
+
+        if (resultadoString.length > 11){
+            let resultadoEmNumero = resultado
+            let resultadoFormatado = resultadoEmNumero.toFixed(2);
+            let resultadoFinal = document.getElementById("tela");
+            resultadoFinal.innerText = resultadoFormatado
+        }
     }
+    // Caso o último caractere seja um oprador, ele será apagado.
     else {
         let tela = document.getElementById("tela");
         tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
-        /* Caso seja, ele será apagado, em seguida o eval fará o calculo. */
-
-        document.getElementById("tela").innerHTML = eval(tela.innerHTML);
     }
-
 };
