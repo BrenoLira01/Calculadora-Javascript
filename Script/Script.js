@@ -1,50 +1,97 @@
+let tela = document.getElementById("tela");
 
-        //pegando a tela
-var tela = document.getElementById("tela");
+/* ESCREVER BOTÕES NUMÉRICOS NA TELA.*/
+let botoesNumericos = document.querySelectorAll(".numero");
+botoesNumericos.forEach(function (button) {
+    button.addEventListener("click", function () {
 
-        // Selecionar todos os botões menos o de resulatdo, tela, back(apagar caractere) e clean(limpar tela).
-        var botoesNumericos = document.querySelectorAll(".button:not(#botaoResultado):not(#tela):not(#botaoBack):not(#botaoClean)");
+        // Apaga o zero no começo da tela.
+        if (tela.innerText === "0") {
+            tela.innerText = ""
+        }
 
-        /* função escrever botões na tela.*/      
-        botoesNumericos.forEach(function (button) {
-            button.addEventListener("click", function () {
+        if (tela.innerText.length < 12) { //  Tamanho máximo de 12 caracteres.
 
-                if (tela.innerText.length < 12) { // O 'if (tela.innerText.length < 12)' não permite que ultrapasse 12 caracteres.
-                    
-                tela.innerText += button.innerText.trim(); /* O 'tela.innerText += button.innerText.trim();' vai escrever botões na tela.
+            tela.innerText += button.innerText.trim(); /* Vai escrever botões na tela.
                 O 'trim' remove espaços em branco extras. */
 
-                }
-            });
+        }
+    });
+});
 
-        });
+// ESCREVER BOTÕES DE OPERAÇÃO E VÍRGULA.
+let botoesOperando = document.querySelectorAll(".operando, .virgula");
+botoesOperando.forEach(function (botao) {
+    botao.addEventListener("click", function () {
 
-        //função limpar tela
+        if (tela.innerText === "0") { // Concatena o zero com botão de operação.
+            tela.innerText = tela.innerText += botao.innerText.trim();
+        }
 
-        var limparTela = document.getElementById("botaoClean");
+        // Obtêm o  último caractere
+        let ultimoCaractere = tela.innerText.slice(-1);
 
-        limparTela.addEventListener("click", limpar);
+        // Verificar se ele é um operador.
+        let ultimoCaractereEOperador = "+-x/.".includes(ultimoCaractere);
 
-        function limpar() {
-            tela.innerText = ""
-        };
+        if (!ultimoCaractereEOperador) {
+            // Caso não seja, adicioma um operador.
+            tela.innerText += botao.innerText.trim();
+        }
+        else {
+            // permite substituir um operador por outro.
+            tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
+            tela.innerText += botao.innerText.trim();
+        }
+    });
+});
 
-        //função apagar um caractere
+//LIMPAR TELA
+let limparTela = document.getElementById("botaoClean");
 
-        var apagarNumero = document.getElementById("botaoBack");
+limparTela.addEventListener("click", limpar);
 
-        apagarNumero.addEventListener("click", apagar);
+function limpar() {
+    tela.innerText = "0"
+};
 
-        function apagar() {
-            tela.innerHTML= tela.innerHTML.substring(0, tela.innerHTML.length - 1); // vai apagar o ultimo carctere na tela.
-        };
-        
-        //função calcular
-        var calcularNumero = document.getElementById("botaoResultado");
+//APAGAR
+let apagarNumero = document.getElementById("botaoBack");
 
-        calcularNumero.addEventListener("click", calcular);
+apagarNumero.addEventListener("click", apagar);
 
-        function calcular() {
-          var tela = document.getElementById("tela").innerHTML;
-          document.getElementById("tela").innerHTML = eval(tela); // Vai escrever o resultado na tela. O 'eval' vai fazer a parte de calcular.
-        };
+function apagar() {
+    tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1); // vai apagar o último caractere na tela.
+    if (tela.innerText === "") { // Se a tela estiver vazia adicona um 0.
+        tela.innerText = "0"
+    }
+};
+
+//fUNÇÃO CALCULAR
+let calcularNumero = document.getElementById("botaoResultado");
+
+calcularNumero.addEventListener("click", calcular);
+
+function calcular() {
+    let tela = document.getElementById("tela").innerHTML;
+
+    let ultimoCaractere = tela.slice(-1);
+
+    let ultimoCaractereEOperador = "+-x/".includes(ultimoCaractere);
+
+    const novaString = tela.replace(/x/g, "*");
+    console.log(novaString); // Troca o x por * para o eval fazer o calculo.
+
+    if (!ultimoCaractereEOperador) {
+        document.getElementById("tela").innerHTML = eval(novaString);
+        /* Se o último caractere NÃO for um operador o 'eval' vai fazer o calculo normalmente. */
+    }
+    else {
+        let tela = document.getElementById("tela");
+        tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
+        /* Caso seja, ele será apagado, em seguida o eval fará o calculo. */
+
+        document.getElementById("tela").innerHTML = eval(tela.innerHTML);
+    }
+
+};

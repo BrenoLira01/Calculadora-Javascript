@@ -1,4 +1,4 @@
-![Imagem titulo](https://i.im.ge/2023/12/13/E3BclT.Calculadora-JavaScript.png)
+![Imagem titulo](https://i.im.ge/2023/12/13/E3BclT.Calculadora-JavaScript-2.png)
 
 ## Introdução
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
@@ -15,7 +15,7 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 
 ## Meu Projeto
 
-![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/main/Calculadora-imagem.png)
+![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/main/Calculadora-imagem-2.jpg)
 
 ## Dificuldades Enfrentadas
 A parte mais desafiadora foi a interação entre os botões na implementação JavaScript.
