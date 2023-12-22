@@ -1,4 +1,4 @@
-![Imagem titulo](https://i.im.ge/2023/12/13/E3BclT.Calculadora-JavaScript-2.png)
+![Imagem titulo](https://i.im.ge/2023/12/13/E3BclT.Calculadora-JavaScript.png)
 
 ## Introdução
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
@@ -10,12 +10,12 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 
 ## Como Usar
 
-1. Acesse o link [aqui](https://brenolira01.github.io/Calculadora-javascript).
+1. Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
 2. Interaja com a calculadora pressionando os botões.
 
 ## Meu Projeto
 
-![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/main/Calculadora-imagem-2.jpg)
+![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/main/Calculadora-imagem.png)
 
 ## Dificuldades Enfrentadas
 A parte mais desafiadora foi a interação entre os botões na implementação JavaScript.
@@ -47,8 +47,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e soli
 ## Autor
 Nome: Francisco Breno Lira Almeida
 
-Contato: franciscobrenolira@gmail.com
+## Contato
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
 
 ## Licença
-Este projeto é licenciado sob os termos da [Licença Apache 2.0](./LICENSE).
-Leia o arquivo [LICENSE](./LICENSE) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
+Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
+Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
