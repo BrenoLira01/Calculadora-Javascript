@@ -47,9 +47,8 @@ body {
     padding-right: 30px;
     background-color: #1d1d1d;
     color: #E8E4E2;
-    font: normal 40pt Arial;
+    font: normal 35pt Arial;
     border-radius: 30px;
-    overflow-wrap: break-word;
 }
 
 #botaoZero {
