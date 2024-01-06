@@ -23,8 +23,8 @@
     background-size: cover;
     background-color: #ffffff;
     cursor: pointer;
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     border: none;
     border-radius: 20px;
 }
@@ -116,7 +116,9 @@ body {
 
     .github {
         position: flex;
-        top: 515px;
+        top: 512px;
         left: 50%;
+        width: 64px;
+        height: 64px;
     }
 }
