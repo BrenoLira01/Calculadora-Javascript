@@ -116,9 +116,7 @@ body {
 
     .github {
         position: flex;
-        top: 512px;
+        top: 510px;
         left: 50%;
-        width: 64px;
-        height: 64px;
     }
 }
