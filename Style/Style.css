@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /*Deixa o grid em quatro colunas.*/
-    box-shadow: 0 15px 0 0 #3f3f3f;
+    box-shadow: 0 12px 0 0 #3f3f3f;
     /*Adiciona sombra no grid*/
     gap: 8px;
     /*Espaçamento dos botões.*/
@@ -22,7 +22,6 @@
     background-image: url("../imagens/Github.svg");
     background-size: cover;
     background-color: #ffffff;
-    color: #000000;
     cursor: pointer;
     width: 64px;
     height: 64px;
@@ -51,11 +50,11 @@ body {
     height: 100%;
     border: none;
     /*Sem bordas.*/
-    box-shadow: 0px 5px 0 0 #3f3f3f;
+    box-shadow: 0 4px 0 0 #3f3f3f;
     /*Adiciona sombra nos botões*/
     border-radius: 25px;
     /*Arredonda as bordas.*/
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.0.1s ease-in-out;
     /*Adiciona efeito de afundamento.*/
 }
 
@@ -111,12 +110,12 @@ body {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .github {
         position: flex;
-        top: 550px;
+        top: 515px;
         left: 50%;
     }
 }
