@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /*Deixa o grid em quatro colunas.*/
-    box-shadow: 0 11px 0 0 #3f3f3f;
+    box-shadow: 0 15px 0 0 #3f3f3f;
     /*Adiciona sombra no grid*/
     gap: 8px;
     /*Espaçamento dos botões.*/
@@ -12,6 +12,22 @@
     border-radius: 20px;
     /*Arredondar a borda*/
     border: 15px solid #4F4F4F;
+}
+
+.github {
+    position: absolute;
+    top: 20px;
+    left: 96%;
+    transform: translateX(-50%);
+    background-image: url("../imagens/Github.svg");
+    background-size: cover;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 20px;
 }
 
 body {
@@ -35,16 +51,21 @@ body {
     height: 100%;
     border: none;
     /*Sem bordas.*/
-    box-shadow: 0px 4px 0 0 #3f3f3f;
+    box-shadow: 0px 5px 0 0 #3f3f3f;
     /*Adiciona sombra nos botões*/
     border-radius: 25px;
     /*Arredonda as bordas.*/
+    transition: transform 0.2s ease-in-out;
+    /*Adiciona efeito de afundamento.*/
+}
+
+.button:active {
+    transform: translateY(4px);
 }
 
 #tela {
     grid-column: span 4;
-    /*Tela ocupa 4 colunas.*/
-    text-align: right;
+    text-align: center;
     padding-right: 15px;
     background-color: #2F2F2F;
     color: #E8E4E2;
@@ -52,6 +73,9 @@ body {
     border-radius: 20px;
     height: 90%;
     box-shadow: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #botaoZero {
@@ -80,4 +104,19 @@ body {
 #botaoBack {
     background-color: #747474;
     border-radius: 40px;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .github {
+        position: flex;
+        top: 550px;
+        left: 50%;
+    }
 }

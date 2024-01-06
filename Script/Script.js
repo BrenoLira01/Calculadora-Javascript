@@ -122,3 +122,11 @@ function calcular() {
         tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
     }
 };
+
+//LINK GITHUB
+let gitBotao = document.getElementsByClassName("github")[0];
+gitBotao.addEventListener("click", goToLink);
+
+function goToLink() {
+    window.location.href = "https://github.com/BrenoLira01";
+}
