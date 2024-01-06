@@ -1,8 +1,3 @@
-* {
-    overflow: hidden;
-    /*Qualquer conteúdo que ultrapasse os limites do elemento será cortado e não será visível na página.*/
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -11,7 +6,6 @@
     /*Adiciona sombra no grid*/
     grid-gap: 8px;
     /*Espaçamento dos botões.*/
-    padding: 3px;
     background: #4F4F4F;
     width: 300px;
     height: 420px;
@@ -44,6 +38,7 @@ body {
     /*Se adaptar a tamanho de tela.*/
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .button {
