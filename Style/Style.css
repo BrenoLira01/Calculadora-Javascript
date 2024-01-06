@@ -1,11 +1,17 @@
+* {
+    overflow: hidden;
+    /*Qualquer conteúdo que ultrapasse os limites do elemento será cortado e não será visível na página.*/
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /*Deixa o grid em quatro colunas.*/
     box-shadow: 0 12px 0 0 #3f3f3f;
     /*Adiciona sombra no grid*/
-    gap: 8px;
+    grid-gap: 8px;
     /*Espaçamento dos botões.*/
+    padding: 3px;
     background: #4F4F4F;
     width: 300px;
     height: 420px;
