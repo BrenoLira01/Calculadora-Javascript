@@ -52,8 +52,7 @@ body {
     overflow: hidden;
 }
 
-.button,
-#tela {
+.button, #tela {
     text-align: center;
     border: none;
     border-radius: 25px;
@@ -146,7 +145,8 @@ body {
     .link {
         display: flex;
         justify-content: center;
-        top: 75%;
+        gap: 20px;
+        top: 90vh;
         left: 50%;
         transform: translate(-50%, -50%);
     }
