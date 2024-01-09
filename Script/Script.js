@@ -130,3 +130,11 @@ gitBotao.addEventListener("click", goToLink);
 function goToLink() {
     window.location.href = "https://github.com/BrenoLira01";
 }
+
+//LINK LINKEDIN
+let linBotao = document.getElementsByClassName("linkedin")[0];
+linBotao.addEventListener("click", goToLink2);
+
+function goToLink2() {
+    window.location.href = "https://br.linkedin.com/in/breno-lira-b1b0342a9?trk=people-guest_people_search-card";
+}
