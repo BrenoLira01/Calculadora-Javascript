@@ -14,7 +14,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     position: fixed;
     top: 20px;
     right: 20px;
@@ -143,11 +143,12 @@ body {
     }
 
     .link {
+        position: fixed;
         display: flex;
         justify-content: center;
         gap: 20px;
-        top: 80vh;
+        top: 520px;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
     }
 }
