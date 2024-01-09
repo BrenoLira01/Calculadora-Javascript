@@ -146,7 +146,7 @@ body {
         display: flex;
         justify-content: center;
         gap: 20px;
-        top: calc(80vh + 20px);
+        top: 80vh;
         left: 50%;
         transform: translate(-50%, -50%);
     }
