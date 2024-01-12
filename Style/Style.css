@@ -1,18 +1,18 @@
 .grid-container {
     /* Grid da calculadora */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    box-shadow: 0 12px 0 0 #3f3f3f;
-    grid-gap: 8px;
+    grid-template-columns: repeat(4, 1fr); /* Grid de quatro colunas*/
+    box-shadow: 0 12px 0 0 #3f3f3f; /* sombras*/
+    grid-gap: 8px; /* Espaçamento dos botões*/
     background: #4F4F4F;
-    width: 380px;
-    height: 520px;
-    border-radius: 20px;
+    width: 28vw;
+    height: 70vh;
+    border-radius: 20px; /* Arredondamento das bordas*/
     border: 18px solid #4F4F4F;
 }
 
 .link {
-    /* Alinhamento dos botões de link*/
+    /* Posicionamento dos botões de link para desktop*/
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -29,8 +29,13 @@
     height: 60px;
     border: none;
     border-radius: 20px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; /* Não repetir a imagem*/
     background-position: center;
+    transition: all 0.3s ease; /* Transição suave*/
+}
+
+.social-icon:hover {
+    transform: scale(1.25); /* Zoom no botão*/
 }
 
 .github {
@@ -51,88 +56,93 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-}
-
-.button,
-#tela {
-    text-align: center;
-    border: none;
-    border-radius: 25px;
-    color: #ffffff;
-    font: normal 30pt Arial;
-    box-shadow: 0 4px 0 0 #3f3f3f;
-    transition: transform 0.01s ease-in-out;
+    overflow: hidden; /* Sem barra de rolagem*/
 }
 
 .button {
+    text-align: center;
+    border-radius: 25px;
     background-color: #8d8c8c;
+    font: normal 2.5em Arial;
     width: 97%;
     height: 97%;
     position: center;
     cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 0 0 #3f3f3f;
 }
 
 .button:active {
-    transform: translateY(4px);
+    transform: translateY(4px); /* Efeito de afundamento*/
+}
+
+.button:hover {
+    background: #696969;
 }
 
 #tela {
     grid-column: span 4;
-    padding-right: 15px;
+    padding-right: 15px; /* Define a quantidade de espaço vazio a direita do texto da tela*/
     background-color: #2F2F2F;
     color: #E8E4E2;
-    font-size: 45pt;
+    font-size: 4em;
     border-radius: 20px;
     height: 90%;
     box-shadow: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    text-align: right;
 }
 
+.button,
+#tela {
+    border: none;
+    color: #ffffff;
+    outline: 0; /* Remove o destaque*/
+}
 
 #botaoZero {
-    /* botão zero ocupa duas colunas na horizontal */
-    grid-column: span 2;
-    width: 100%;
+    grid-column: span 2; /* Botão ocupa duas linhas*/
 }
 
 #botaoResultado {
-    /* botão resultado ocupa duas colunas na vertical */
     grid-row: span 2;
-    height: 100%;
-    background-color: #E1813D;
-}
-
-.operando {
-    background-color: #747474;
-    border-radius: 35px;
 }
 
 #botaoClean {
-    background-color: #E1813D;
     border-radius: 40px;
 }
 
-#botaoBack {
+#botaoClean,
+#botaoResultado {
+    background-color: #E1813D;
+}
+
+#botaoClean:hover,
+#botaoResultado:hover {
+    background: #AC602A; 
+}
+
+#botaoBack,
+.operando {
     background-color: #747474;
     border-radius: 40px;
 }
 
-@media (max-width: 768px) {
+#botaoBack:hover,
+.operando:hover {
+    background-color: #595959;
+}
+
+
+/* Estilos para dispositivos móveis com largura máxima de 768px*/
+
+@media (max-width: 768px) { 
 
     .grid-container {
-        /* Grid da calculadora */
         width: 75vw;
         height: 60vh;
-    }
-
-    body {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        margin-top: 15%;
     }
 
     #tela {
@@ -143,6 +153,38 @@ body {
         font: normal 2em Arial;
         width: 100%;
         height: 100%;
+    }
+}
+
+/* Estilos para tablets com largura mínima de 768px e largura máxima de 1024px */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .grid-container {
+        width: 60vw;
+        height: 60vh;
+    }
+
+    #tela {
+        font-size: 5em;
+    }
+
+    .button {
+        font: normal 3em Arial;
+        width: 95%;
+        height: 95%;
+    }
+}
+
+/* Estilos para dispositivos móveis e tablets */
+
+@media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
+    
+    body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 15%;
     }
 
     .link {

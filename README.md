@@ -26,17 +26,17 @@ Aqui está um exemplo de como lidar com a interação de botões em JavaScript:
 ```javascript
 
 // Seleciona a tela onde os números serão exibidos.
-var tela = document.getElementById("tela");
+let tela = document.getElementById("tela");
 
 // Seleciona todos os botões numéricos.
-var botoesNumericos = document.querySelectorAll(".button");
+let botoesNumericos = document.querySelectorAll(".button");
 
 // Adiciona um evento de clique para cada botão numérico.
 botoesNumericos.forEach(function (button) {
     button.addEventListener("click", function () {
 
         // Adiciona o texto do botão à tela, removendo espaços em branco extras.
-        tela.innerText += button.innerText.trim();
+        tela.value += button.innerText.trim();
     });
 });
 ```
