@@ -76,7 +76,7 @@ Para isso, vamos converter o resultado em uma string utilizando .toString(), a f
 
 Se for maior, utilizamos o método .toFixed() para limitar o resultado a duas casas decimais.
 
-Infelizmente, não consegui implementar a notação científica utilizando o função eval(). Por isso, o substituí por new Function().
+Infelizmente, não consegui implementar a notação científica utilizando o função eval(). Por isso, substituí por new Function().
 
 ```javascript
 
