@@ -1,13 +1,17 @@
 .grid-container {
     /* Grid da calculadora */
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Grid de quatro colunas*/
-    box-shadow: 0 12px 0 0 #3f3f3f; /* sombras*/
-    grid-gap: 8px; /* Espaçamento dos botões*/
+    grid-template-columns: repeat(4, 1fr);
+    /* Grid de quatro colunas*/
+    box-shadow: 0 12px 0 0 #3f3f3f;
+    /* sombras*/
+    grid-gap: 8px;
+    /* Espaçamento dos botões*/
     background: #4F4F4F;
     width: 28vw;
     height: 70vh;
-    border-radius: 20px; /* Arredondamento das bordas*/
+    border-radius: 20px;
+    /* Arredondamento das bordas*/
     border: 18px solid #4F4F4F;
 }
 
@@ -29,13 +33,16 @@
     height: 60px;
     border: none;
     border-radius: 20px;
-    background-repeat: no-repeat; /* Não repetir a imagem*/
+    background-repeat: no-repeat;
+    /* Não repetir a imagem*/
     background-position: center;
-    transition: all 0.3s ease; /* Transição suave*/
+    transition: all 0.3s ease;
+    /* Transição suave*/
 }
 
 .social-icon:hover {
-    transform: scale(1.25); /* Zoom no botão*/
+    transform: scale(1.25);
+    /* Zoom no botão*/
 }
 
 .github {
@@ -56,7 +63,8 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Sem barra de rolagem*/
+    overflow: hidden;
+    /* Sem barra de rolagem*/
 }
 
 .button {
@@ -73,7 +81,8 @@ body {
 }
 
 .button:active {
-    transform: translateY(4px); /* Efeito de afundamento*/
+    transform: translateY(4px);
+    /* Efeito de afundamento*/
 }
 
 .button:hover {
@@ -82,7 +91,8 @@ body {
 
 #tela {
     grid-column: span 4;
-    padding-right: 15px; /* Define a quantidade de espaço vazio a direita do texto da tela*/
+    padding-right: 15px;
+    /* Define a quantidade de espaço vazio a direita do texto da tela*/
     background-color: #2F2F2F;
     color: #E8E4E2;
     font-size: 4em;
@@ -99,11 +109,13 @@ body {
 #tela {
     border: none;
     color: #ffffff;
-    outline: 0; /* Remove o destaque*/
+    outline: 0;
+    /* Remove o destaque*/
 }
 
 #botaoZero {
-    grid-column: span 2; /* Botão ocupa duas linhas*/
+    grid-column: span 2;
+    /* Botão ocupa duas linhas*/
 }
 
 #botaoResultado {
@@ -121,7 +133,7 @@ body {
 
 #botaoClean:hover,
 #botaoResultado:hover {
-    background: #AC602A; 
+    background: #AC602A;
 }
 
 #botaoBack,
@@ -136,9 +148,9 @@ body {
 }
 
 
-/* Estilos para dispositivos móveis com largura máxima de 768px*/
+/* Dispositivos móveis com largura máxima de 768px*/
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
 
     .grid-container {
         width: 75vw;
@@ -156,10 +168,10 @@ body {
     }
 }
 
-/* Estilos para tablets com largura mínima de 768px e largura máxima de 1024px */
+/* Tablets com largura mínima de 768px e largura máxima de 1024px */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+
     .grid-container {
         width: 60vw;
         height: 60vh;
@@ -178,8 +190,9 @@ body {
 
 /* Estilos para dispositivos móveis e tablets */
 
-@media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
-    
+@media (max-width: 768px),
+(min-width: 768px) and (max-width: 1024px) {
+
     body {
         display: flex;
         align-items: flex-start;
@@ -196,4 +209,38 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+/* Modo paisagem dispositivos móveis*/
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    
+    .grid-container {
+        width: 50vw;
+        height: 150vh;
+    }
+
+    #tela {
+        font-size: 4em;
+    }
+
+    .button {
+        font: normal 2.5em Arial;
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+    }
+
+    body {
+        margin-top: 1vh;
+        overflow: visible;
+    }
+
+    .link {
+        flex-direction: column;
+        gap: 15px;
+        top: 25%;
+        left: 90%;
+    }
+
 }

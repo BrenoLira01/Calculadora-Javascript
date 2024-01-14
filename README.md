@@ -12,7 +12,7 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 
 ![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/master/imagens/Calculadora-imagem-2.jpg)
 
-## Dificuldades Enfrentadas 😓
+## Dificuldades Enfrentadas 💪
 A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
 
 ## Como impedir a repetição do ponto ? 🤔
