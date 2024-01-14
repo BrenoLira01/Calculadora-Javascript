@@ -29,7 +29,7 @@ botaoPonto.forEach(function (botao) {
             tela.value = tela.value += botao.innerText.trim();
         }
 
-        // Só permite um único ponto na tela
+        // Verifica se já possui um ponto na tela
         if(tela.value.includes(".")) {
             return;
         }
@@ -47,18 +47,18 @@ botoesOperando.forEach(function (botao) {
             return;
         }
 
-        // Obtêm o  último caractere
+        // Obtêm o último caractere
         let ultimoCaractere = tela.value.slice(-1);
 
         // Verificar se ele é um operador.
         let ultimoCaractereEOperador = "+-x/".includes(ultimoCaractere);
 
-         // Caso não seja, adicioma um operador
+         // Caso não seja, será adicionado.
         if (!ultimoCaractereEOperador) {
             tela.value += botao.innerText.trim();
         }
 
-        // Permite substituir um operador por outro
+        // Se for, será substituido por outro.
         else {
             tela.value = tela.value.substring(0, tela.value.length - 1);
             tela.value += botao.innerText.trim();
@@ -106,17 +106,19 @@ function calcular() {
 
         document.getElementById("tela").value = resultado;
 
-        // Quando ultrapassar 11 caracteres, é feito uma notação ciêntifica
+        // Converter resultado em uma string.
         let resultadoString = resultado.toString();
 
+        // verificar se ele possui mais de 12 caracteres.
         if (resultadoString.length > 12){
             let resultadoEmNumero = resultado
             let resultadoFormatado = resultadoEmNumero.toFixed(2);
+            //utilizamos .toFixed() para limitar o resultado a duas casas decimais.
             let resultadoFinal = document.getElementById("tela");
             resultadoFinal.value = resultadoFormatado
         }
     }
-    // Caso o último caractere seja um oprador, ele será apagado
+    // Caso o último caractere seja um operador, ele será apagado
     else {
         let tela = document.getElementById("tela");
         tela.value = tela.value.substring(0, tela.value.length - 1);
