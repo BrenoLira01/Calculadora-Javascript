@@ -5,15 +5,15 @@ let botoesNumericos = document.querySelectorAll(".numero");
 botoesNumericos.forEach(function (button) {
     button.addEventListener("click", function () {
         
-        // Apaga o zero no começo da tela
+        // Apaga o zero no começo da tela.
         if (tela.value === "0") {
             tela.value = ""
         }
 
-        //  Tamanho máximo de 12 caracteres
+        //  Tamanho máximo de 12 caracteres.
         if (tela.value.length < 12) {
 
-        // Vai escrever botões na tela. O 'trim' remove espaços em branco extras
+        // Vai escrever botões na tela. O 'trim' remove espaços em branco extras.
             tela.value += button.innerText.trim();
         }
     });
@@ -24,12 +24,12 @@ let botaoPonto = document.querySelectorAll(".ponto");
 botaoPonto.forEach(function (botao) {
     botao.addEventListener("click", function () {
 
-        // Concatena o zero com ponto
+        // Concatena o zero com ponto.
         if (tela.value === "0") {
             tela.value = tela.value += botao.innerText.trim();
         }
 
-        // Verifica se já possui um ponto na tela
+        // Verifica se já possui um ponto na tela.
         if(tela.value.includes(".")) {
             return;
         }
@@ -42,12 +42,12 @@ let botoesOperando = document.querySelectorAll(".operando");
 botoesOperando.forEach(function (botao) {
     botao.addEventListener("click", function () {
 
-        // Concatena o zero com botão de operação
+        // Concatena o zero com botão de operação.
         if (tela.value === "0") {
             return;
         }
 
-        // Obtêm o último caractere
+        // Obtêm o último caractere.
         let ultimoCaractere = tela.value.slice(-1);
 
         // Verificar se ele é um operador.
@@ -99,7 +99,7 @@ function calcular() {
     // Troca o 'x' por '*'
     let novaString = tela.replace(/x/g, "*");
 
-    // Se o último caractere NÃO for um operador o calculo será feito
+    // Se o último caractere NÃO for um operador o calculo será feito.
     if (!ultimoCaractereEOperador) {
         let calcular = new Function('return ' + novaString);
         let resultado = calcular();
@@ -118,7 +118,7 @@ function calcular() {
             resultadoFinal.value = resultadoFormatado
         }
     }
-    // Caso o último caractere seja um operador, ele será apagado
+    // Caso o último caractere seja um operador, ele será apagado.
     else {
         let tela = document.getElementById("tela");
         tela.value = tela.value.substring(0, tela.value.length - 1);

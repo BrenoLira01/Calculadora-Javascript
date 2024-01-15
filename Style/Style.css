@@ -2,21 +2,21 @@
     /* Grid da calculadora */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Grid de quatro colunas*/
+    /* Grid de quatro colunas */
     box-shadow: 0 12px 0 0 #3f3f3f;
     /* sombras*/
     grid-gap: 8px;
-    /* Espaçamento dos botões*/
+    /* Espaçamento dos botões */
     background: #4F4F4F;
     width: 28vw;
     height: 70vh;
     border-radius: 20px;
-    /* Arredondamento das bordas*/
+    /* Arredondamento das bordas */
     border: 18px solid #4F4F4F;
 }
 
 .link {
-    /* Posicionamento dos botões de link para desktop*/
+    /* Posicionamento dos botões de link para desktop */
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -34,15 +34,15 @@
     border: none;
     border-radius: 20px;
     background-repeat: no-repeat;
-    /* Não repetir a imagem*/
+    /* Não repetir a imagem */
     background-position: center;
     transition: all 0.3s ease;
-    /* Transição suave*/
+    /* Transição suave */
 }
 
 .social-icon:hover {
     transform: scale(1.25);
-    /* Zoom no botão*/
+    /* Zoom no botão */
 }
 
 .github {
@@ -64,7 +64,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* Sem barra de rolagem*/
+    /* Sem barra de rolagem */
 }
 
 .button {
@@ -82,7 +82,7 @@ body {
 
 .button:active {
     transform: translateY(4px);
-    /* Efeito de afundamento*/
+    /* Efeito de afundamento */
 }
 
 .button:hover {
@@ -92,7 +92,7 @@ body {
 #tela {
     grid-column: span 4;
     padding-right: 15px;
-    /* Define a quantidade de espaço vazio a direita do texto da tela*/
+    /* Define a quantidade de espaço vazio a direita do texto da tela */
     background-color: #2F2F2F;
     color: #E8E4E2;
     font-size: 4em;
@@ -110,12 +110,12 @@ body {
     border: none;
     color: #ffffff;
     outline: 0;
-    /* Remove o destaque*/
+    /* Remove o destaque */
 }
 
 #botaoZero {
     grid-column: span 2;
-    /* Botão ocupa duas linhas*/
+    /* Botão ocupa duas linhas */
 }
 
 #botaoResultado {
@@ -148,7 +148,7 @@ body {
 }
 
 
-/* Dispositivos móveis com largura máxima de 768px*/
+/* Dispositivos móveis com largura máxima de 768px */
 
 @media (max-width: 768px) {
 
@@ -211,7 +211,7 @@ body {
     }
 }
 
-/* Modo paisagem dispositivos móveis*/
+/* Modo paisagem dispositivos móveis */
 
 @media (max-width: 1024px) and (orientation: landscape) {
     
