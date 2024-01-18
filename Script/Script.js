@@ -101,19 +101,22 @@ function calcular() {
 
     // Se o último caractere NÃO for um operador o calculo será feito.
     if (!ultimoCaractereEOperador) {
+
+        // A função new Function realizará o cálculo.
         let calcular = new Function('return ' + novaString);
         let resultado = calcular();
-
         document.getElementById("tela").value = resultado;
 
         // Converter resultado em uma string.
         let resultadoString = resultado.toString();
 
-        // verificar se ele possui mais de 12 caracteres.
+        // Se ele possui mais de 12 caracteres.
         if (resultadoString.length > 12){
             let resultadoEmNumero = resultado
             let resultadoFormatado = resultadoEmNumero.toFixed(2);
             //utilizamos .toFixed() para limitar o resultado a duas casas decimais.
+
+            // Adicionar o resultado formatado a tela.
             let resultadoFinal = document.getElementById("tela");
             resultadoFinal.value = resultadoFormatado
         }

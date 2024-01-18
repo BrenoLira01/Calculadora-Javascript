@@ -1,124 +1,120 @@
-![Imagem titulo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/master/imagens/Calculadora-JavaScript-2.png)
+<style>
+    h1 {
+      text-align: center;
+    }
 
-## Introdução
-Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 
-## Como Usar
+<img src="./imagens/Calculadora-JavaScript-2.png" alt="Calculadora javascript"/>
+
+<br>
+
+<h1>Introdução</h1>
+
+<p>Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
+</p>
+
+<h2>Como Usar</h2>
 
 1. Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
 2. Interaja com a calculadora pressionando os botões.
 
-## Meu Projeto
+<br>
 
-![Imagem de Exemplo](https://raw.githubusercontent.com/BrenoLira01/Calculadora-Javascript/master/imagens/Calculadora-imagem-2.jpg)
+<img id="img" src="./imagens/Calculadora-imagem-2.jpg" alt="calculadora minimalista cinza com um fundo azul claro" />
 
-## Dificuldades Enfrentadas 💪
-A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
+<br>
 
-## Como impedir a repetição do ponto ? 🤔
+<h1>Dificuldades Enfrentadas 💪</h1>
 
-Neste trecho de código, verificamos se já existe um ponto na tela com o método includes(). Isso impede a adição de mais de um ponto decimal quando o botão de ponto é clicado.
+<p>A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
+</p>
 
-Essa abordagem visa evitar a entrada de números inválidos, garantindo que apenas um ponto decimal seja adicionado à tela.
+<br>
 
-```javascript
+<h1>Como impedir a repetição do ponto ? 🤔</h1>
 
-// ESCREVER PONTO
-let botaoPonto = document.querySelectorAll(".ponto");
-botaoPonto.forEach(function (botao) {
-    botao.addEventListener("click", function () {
+<p>Neste trecho de código, verificamos se já existe um ponto na tela com o método includes(). Isso impede a adição de mais de um ponto decimal quando o botão de ponto é clicado.
+</p>
 
-        // Verifica se já possui um ponto na tela.
-        if(tela.value.includes(".")) {
-            return;
-        }
-        tela.value += botao.innerText.trim();
-    });
-});
-```
+<img src="./imagens/readme/includes-ponto.png"/>
 
-## Como evitar a adição de operadores consecutivos ? 🤔
+<br>
+<p>Essa abordagem visa evitar a entrada de números inválidos, garantindo que apenas um ponto decimal seja adicionado à tela.
+</p>
+<br>
 
-Neste trecho, obtemos o último caractere da tela para determinar se é um operador. Isso é realizado utilizando o método slice() seguido pelo includes().
+<img src="./imagens/readme/Escrever ponto.png"/>
 
-Posteriormente, com o uso de if e else, verificamos se o último caractere na tela é um operador. Caso seja, permitimos a substituição, possibilitando a troca de um operador por outro, se necessário.
+<br>
 
-```javascript
+<h1>Como evitar a adição de operadores consecutivos ? 🤔</h1>
 
-// ESCREVER BOTÕES DE OPERAÇÃO
-let botoesOperando = document.querySelectorAll(".operando");
-botoesOperando.forEach(function (botao) {
-    botao.addEventListener("click", function () {
+<p>Neste trecho, obtemos o último caractere da tela para determinar se é um operador. Isso é realizado utilizando o método slice() seguido pelo includes().
+</p>
 
-        // Obtêm o último caractere.
-        let ultimoCaractere = tela.value.slice(-1);
+<img src="./imagens/readme/slice-includes-operador.png"/>
 
-        // Verificar se ele é um operador.
-        let ultimoCaractereEOperador = "+-x/".includes(ultimoCaractere);
+<br>
 
-         // Caso não seja, será adicionado.
-        if (!ultimoCaractereEOperador) {
-            tela.value += botao.innerText.trim();
-        }
+<p>Posteriormente, com o uso de if e else, verificamos se o último caractere na tela é um operador. Caso seja, permitimos a substituição, possibilitando a troca de um operador por outro, se necessário.
+</p>
 
-        // Se for, será substituido por outro.
-        else {
-            tela.value = tela.value.substring(0, tela.value.length - 1);
-            tela.value += botao.innerText.trim();
-        }
-    });
-});
-```
+<br>
 
-## Como implementar notação científica ? 🤔
+<img src="./imagens/readme/Botão de operação.png"/>
 
-Para isso, vamos converter o resultado em uma string utilizando .toString(), a fim de obter seu tamanho. Isso nos permite verificar se ele possui mais de 12 caracteres.
+<br>
 
-Se for maior, utilizamos o método .toFixed() para limitar o resultado a duas casas decimais.
+<h1>Como implementar notação científica ? 🤔</h1>
 
-Infelizmente, não consegui implementar a notação científica utilizando o função eval(). Por isso, substituí por new Function().
+<p>Para isso, vamos converter o resultado em uma string utilizando .toString(), a fim de obter seu tamanho. Isso nos permite verificar se ele ultrapassa 12 caracteres.
+</p>
 
-```javascript
+<img src="./imagens/readme/to.string.png"/>
 
-// fUNÇÃO CALCULAR
-let calcularNumero = document.getElementById("botaoResultado");
-calcularNumero.addEventListener("click", calcular);
+<br>
 
-function calcular() {
+<p>Se for maior, utilizamos o método .toFixed() para limitar o resultado a duas casas decimais, e em seguida o adicionamos a tela.
+</p>
 
-    let tela = document.getElementById("tela").value;
+<br>
 
-        let calcular = new Function('return ' + novaString);
-        let resultado = calcular();
+<img src="./imagens/readme/to.fixed.png"/>
 
-        document.getElementById("tela").value = resultado;
+<br>
 
-        // Converter resultado em uma string.
-        let resultadoString = resultado.toString();
+<p>Decidi utilizar a função new Function() em lugar de eval() por razões de segurança.</p>
 
-        // verificar se ele possui mais de 12 caracteres.
-        if (resultadoString.length > 12){
-            let resultadoEmNumero = resultado
-            let resultadoFormatado = resultadoEmNumero.toFixed(2);
-            //utilizamos .toFixed() para limitar o resultado a duas casas decimais.
-            let resultadoFinal = document.getElementById("tela");
-            resultadoFinal.value = resultadoFormatado
-        }
-    }
-```
+<br>
 
-## 🧠 Tecnologias Utilizadas
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+<img src="./imagens/readme/Função calcular.png"/>
 
-## Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
+<br>
 
-## Autor
-Nome: Francisco Breno
+<h2> 🧠 Tecnologias Utilizadas </h2>
 
-## Contato
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
+<ul>
+<li> Html </li>
+<li> CSS </li>
+<li> JavaScript </li>
+</ul>
 
-## Licença
-Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
+<h2> Contribuições </h2>
+
+<p>Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
+</p>
+
+<h2> Autor </h2>
+
+<p> Feito por <a href="https://br.linkedin.com/in/breno-lira-b1b0342a9?trk=people-guest_people_search-card" target='_blank'> Francisco Breno </a> </p>
+
+<h2> Licença </h2>
+
+<p>Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
 Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
+</p>
