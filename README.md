@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,7 +109,7 @@
 <li> JavaScript </li>
 </ul>
 
-<h2> Contribuições </h2>
+<h2> 🌱 Contribuições </h2>
 
 <p>Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
 </p>
