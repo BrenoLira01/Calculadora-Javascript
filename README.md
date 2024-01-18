@@ -1,127 +1,71 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    h1 {
-      text-align: center;
-    }
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
-<img src="./imagens/Calculadora-JavaScript-2.png" alt="Calculadora javascript"/>
+![Calculadora JavaScript](./imagens/Calculadora-JavaScript-2.png)
 
-<br>
+# Introdução
 
-<h1>Introdução</h1>
+Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
 
-<p>Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
-</p>
-
-<h2>Como Usar</h2>
+## Como Usar
 
 1. Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
 2. Interaja com a calculadora pressionando os botões.
 
-<br>
+![Calculadora](./imagens/Calculadora-imagem-2.jpg)
 
-<img id="img" src="./imagens/Calculadora-imagem-2.jpg" alt="calculadora minimalista cinza com um fundo azul claro" />
+# Dificuldades Enfrentadas 💪
 
-<br>
+A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
 
-<h1>Dificuldades Enfrentadas 💪</h1>
+## Como impedir a repetição do ponto ? 🤔
 
-<p>A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
-</p>
+Neste trecho de código, verificamos se já existe um ponto na tela com o método `includes()`. Isso impede a adição de mais de um ponto decimal quando o botão de ponto é clicado.
 
-<br>
+![Inclui ponto](./imagens/readme/includes-ponto.png)
 
-<h1>Como impedir a repetição do ponto ? 🤔</h1>
+Essa abordagem visa evitar a entrada de números inválidos, garantindo que apenas um ponto decimal seja adicionado à tela.
 
-<p>Neste trecho de código, verificamos se já existe um ponto na tela com o método includes(). Isso impede a adição de mais de um ponto decimal quando o botão de ponto é clicado.
-</p>
+![Inclui ponto](./imagens/readme/Escrever-ponto.png)
 
-<img src="./imagens/readme/includes-ponto.png"/>
+## Como evitar a adição de operadores consecutivos ? 🤔
 
-<br>
-<p>Essa abordagem visa evitar a entrada de números inválidos, garantindo que apenas um ponto decimal seja adicionado à tela.
-</p>
-<br>
+Neste trecho, obtemos o último caractere da tela para determinar se é um operador. Isso é realizado utilizando o método `slice()` seguido pelo `includes()`.
 
-<img src="./imagens/readme/Escrever ponto.png"/>
+![Slice e inclui operador](./imagens/readme/slice-includes-operador.png)
 
-<br>
+Posteriormente, com o uso de `if` e `else`, verificamos se o último caractere na tela é um operador. Caso seja, permitimos a substituição, possibilitando a troca de um operador por outro, se necessário.
 
-<h1>Como evitar a adição de operadores consecutivos ? 🤔</h1>
+![Botão de operação](./imagens/readme/Botão-de-operação.png)
 
-<p>Neste trecho, obtemos o último caractere da tela para determinar se é um operador. Isso é realizado utilizando o método slice() seguido pelo includes().
-</p>
+## Como implementar notação científica ? 🤔
 
-<img src="./imagens/readme/slice-includes-operador.png"/>
+Para isso, vamos converter o resultado em uma string utilizando `.toString()`, a fim de obter seu tamanho. Isso nos permite verificar se ele ultrapassa 12 caracteres.
 
-<br>
+![To string](./imagens/readme/to.string.png)
 
-<p>Posteriormente, com o uso de if e else, verificamos se o último caractere na tela é um operador. Caso seja, permitimos a substituição, possibilitando a troca de um operador por outro, se necessário.
-</p>
+Se for maior, utilizamos o método `.toFixed()` para limitar o resultado a duas casas decimais, e em seguida o adicionamos à tela.
 
-<br>
+![To fixed](./imagens/readme/to.fixed.png)
 
-<img src="./imagens/readme/Botão de operação.png"/>
+Decidi utilizar a função `new Function()` em lugar de `eval()` por razões de segurança.
 
-<br>
+![Função calcular](./imagens/readme/Função-calcular.png)
 
-<h1>Como implementar notação científica ? 🤔</h1>
+## 🧠 Tecnologias Utilizadas
 
-<p>Para isso, vamos converter o resultado em uma string utilizando .toString(), a fim de obter seu tamanho. Isso nos permite verificar se ele ultrapassa 12 caracteres.
-</p>
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-<img src="./imagens/readme/to.string.png"/>
+## 🌱 Contribuições
 
-<br>
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
 
-<p>Se for maior, utilizamos o método .toFixed() para limitar o resultado a duas casas decimais, e em seguida o adicionamos a tela.
-</p>
+## Autor
 
-<br>
+Feito por [Francisco Breno](https://br.linkedin.com/in/breno-lira-b1b0342a9?trk=people-guest_people_search-card).
 
-<img src="./imagens/readme/to.fixed.png"/>
+## 📫 Contato
 
-<br>
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
 
-<p>Decidi utilizar a função new Function() em lugar de eval() por razões de segurança.</p>
+## 📄 Licença
 
-<br>
-
-<img src="./imagens/readme/Função calcular.png"/>
-
-<br>
-
-<h2> 🧠 Tecnologias Utilizadas </h2>
-
-<ul>
-<li> Html </li>
-<li> CSS </li>
-<li> JavaScript </li>
-</ul>
-
-<h2> 🌱 Contribuições </h2>
-
-<p>Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
-</p>
-
-<h2> Autor </h2>
-
-<p> Feito por <a href="https://br.linkedin.com/in/breno-lira-b1b0342a9?trk=people-guest_people_search-card" target='_blank'> Francisco Breno </a> </p>
-
-<h2> Licença </h2>
-
-<p>Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
+Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
 Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
-
-</body>
-</html>
