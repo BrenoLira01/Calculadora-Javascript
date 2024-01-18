@@ -1,14 +1,19 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
     h1 {
       text-align: center;
     }
-
     img {
       display: block;
       margin: 0 auto;
     }
   </style>
-
+</head>
+<body>
 <img src="./imagens/Calculadora-JavaScript-2.png" alt="Calculadora javascript"/>
 
 <br>
@@ -117,4 +122,6 @@
 
 <p>Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
 Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
-</p>
+
+</body>
+</html>
