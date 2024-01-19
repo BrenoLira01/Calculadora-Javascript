@@ -69,5 +69,5 @@ Feito por [Francisco Breno](https://br.linkedin.com/in/breno-lira-b1b0342a9?trk=
 
 ## 📄 Licença
 
-Este projeto é licenciado sob os termos da [Licença Apache 2.0](/LICENSE.txt).
-Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença Apache 2.0.
+Este projeto é licenciado sob os termos da [Licença MIT](/LICENSE.txt).
+Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença MIT.
