@@ -1,22 +1,16 @@
 .grid-container {
-    /* Grid da calculadora */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Grid de quatro colunas */
     box-shadow: 0 12px 0 0 #3f3f3f;
-    /* sombras*/
     grid-gap: 8px;
-    /* Espaçamento dos botões */
     background: #4F4F4F;
     width: 28vw;
     height: 70vh;
     border-radius: 20px;
-    /* Arredondamento das bordas */
-    border: 18px solid #4F4F4F;
+    border: 18px solid #4f4f4f;
 }
 
 .link {
-    /* Posicionamento dos botões de link para desktop */
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -26,33 +20,26 @@
     right: 20px;
 }
 
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
 .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
     cursor: pointer;
     width: 60px;
     height: 60px;
     border: none;
     border-radius: 20px;
-    background-repeat: no-repeat;
-    /* Não repetir a imagem */
-    background-position: center;
     transition: all 0.3s ease;
-    /* Transição suave */
 }
 
 .social-icon:hover {
     transform: scale(1.25);
-    /* Zoom no botão */
-}
-
-.github {
-    background-image: url("../imagens/Github.svg");
-    background-size: 50px 50px;
-}
-
-.linkedin {
-    background-image: url("../imagens/Linkedin.svg");
-    background-size: 50px 50px;
 }
 
 body {
@@ -64,7 +51,6 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* Sem barra de rolagem */
 }
 
 .button {
@@ -82,7 +68,6 @@ body {
 
 .button:active {
     transform: translateY(4px);
-    /* Efeito de afundamento */
 }
 
 .button:hover {
@@ -92,7 +77,6 @@ body {
 #tela {
     grid-column: span 4;
     padding-right: 15px;
-    /* Define a quantidade de espaço vazio a direita do texto da tela */
     background-color: #2F2F2F;
     color: #E8E4E2;
     font-size: 4em;
@@ -110,12 +94,10 @@ body {
     border: none;
     color: #ffffff;
     outline: 0;
-    /* Remove o destaque */
 }
 
 #botaoZero {
     grid-column: span 2;
-    /* Botão ocupa duas linhas */
 }
 
 #botaoResultado {
@@ -147,11 +129,8 @@ body {
     background-color: #595959;
 }
 
-
-/* Dispositivos móveis com largura máxima de 768px */
-
+/* dispositivos móveis */
 @media (max-width: 768px) {
-
     .grid-container {
         width: 75vw;
         height: 60vh;
@@ -168,10 +147,8 @@ body {
     }
 }
 
-/* Tablets com largura mínima de 768px e largura máxima de 1024px */
-
+/* tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
-
     .grid-container {
         width: 60vw;
         height: 60vh;
@@ -185,14 +162,13 @@ body {
         font: normal 3em Arial;
         width: 95%;
         height: 95%;
+        border-radius: 35px;
     }
 }
 
-/* Estilos para dispositivos móveis e tablets */
-
+/* estilos para dispositivos móveis e tablets */
 @media (max-width: 768px),
 (min-width: 768px) and (max-width: 1024px) {
-
     body {
         display: flex;
         align-items: flex-start;
@@ -209,12 +185,18 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .button {
+        border-radius: 20px;
+    }
+
+    .operando {
+        border-radius: 40px;
+    }
 }
 
-/* Modo paisagem dispositivos móveis */
-
+/* modo paisagem para dispositivos móveis */
 @media (max-width: 1024px) and (orientation: landscape) {
-    
     .grid-container {
         width: 35vw;
         height: 100vh;
@@ -244,5 +226,4 @@ body {
         top: 25%;
         left: 90%;
     }
-
 }

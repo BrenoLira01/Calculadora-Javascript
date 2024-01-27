@@ -1,60 +1,58 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
+<!doctype html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-
-    <link rel="icon" href="imagens/icon.png" >
+    <title>calculadora js</title>
+    <meta name="description" content="Calculadora javaScript desenvolvida para proporcionar uma experiência de usuário intuitiva e fácil de usar!">
     
+    <link rel="icon" href="imagens/icon.png">
     <link rel="stylesheet" href="./Style/Style.css">
 </head>
 
 <body>
     <div class="grid-container">
 
-        <!-- TELA -->
-        <td>
-            <input type="text" id="tela" value="0" readonly/>
-          </td>
+                <input type="text" id="tela" value="0" readonly aria-label="Valor da Calculadora">
 
-                <!-- Primeira linha-->
-                <button class="button" id="botaoClean"> c </button>
-                <button class="button" id="botaoBack"> < </button>
-                <button class="button operando" id="divisao"> / </button>
-                <button class="button operando"> x </button>
+                <button class="button" id="botaoClean">c</button>
+                <button class="button" id="botaoBack"><</button>
+                <button class="button operando" id="divisao">/</button>
+                <button class="button operando">x</button>
 
-                <!-- Segunda linha-->
-                <button class="button numero"> 7 </button>
-                <button class="button numero"> 8 </button>
-                <button class="button numero"> 9 </button>
-                <button class="button operando"> - </button>
+                <button class="button numero">7</button>
+                <button class="button numero">8</button>
+                <button class="button numero">9</button>
+                <button class="button operando">-</button>
 
-                <!-- Terceira linha-->
-                <button class="button numero"> 4 </button>
-                <button class="button numero"> 5 </button>
-                <button class="button numero"> 6 </button>
-                <button class="button operando"> + </button>
+                <button class="button numero">4</button>
+                <button class="button numero">5</button>
+                <button class="button numero">6</button>
+                <button class="button operando">+</button>
 
-                <!-- Quarta linha-->
-                <button class="button numero"> 1 </button>
-                <button class="button numero"> 2 </button>
-                <button class="button numero"> 3 </button>
-                <button class="button" id="botaoResultado"> = </button>
+                <button class="button numero">1</button>
+                <button class="button numero">2</button>
+                <button class="button numero">3</button>
+                <button class="button" id="botaoResultado">=</button>
 
-                <!-- Quinta linha-->
-                <button class="button numero" id="botaoZero"> 0 </button>
-                <button class="button ponto"> . </button>
+                <button class="button numero" id="botaoZero">0</button>
+                <button class="button ponto">.</button>
     </div>
+    <div class="link">
 
-<div class="link">
-    
-    <button class="social-icon github"></button>
-    <button class="social-icon linkedin"></button>
-
-</div>
-
+        <a href="https://github.com/BrenoLira01" target="_blank" rel="noopener noreferrer">
+            <button class="social-icon" aria-label="Ir para o GitHub">
+                <img src="./imagens/Github.svg" alt="GitHub" class="icon">
+            </button>
+        </a>
+        <a href="https://br.linkedin.com/in/breno-lira-b1b0342a9?trk=people-guest_people_search-card" target="_blank"
+            rel="noopener noreferrer">
+            <button class="social-icon" aria-label="Ir para o LinkedIn">
+                <img src="./imagens/Linkedin.svg" alt="LinkedIn" class="icon">
+            </button>
+        </a>
+        
+    </div>
     <script src="./Script/Script.js"></script>
 </body>
 
