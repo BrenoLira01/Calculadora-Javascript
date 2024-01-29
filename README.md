@@ -61,7 +61,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e soli
 
 ## Autor
 
-Feito por [Francisco Breno](https://br.linkedin.com/in/breno-lira-b1b0342a9?trk=people-guest_people_search-card).
+Feito por [Francisco Breno](https://www.linkedin.com/in/breno-lira-perfil).
 
 ## 📫 Contato
 

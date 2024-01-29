@@ -4,8 +4,8 @@
     box-shadow: 0 12px 0 0 #3f3f3f;
     grid-gap: 8px;
     background: #4F4F4F;
-    width: 28vw;
-    height: 70vh;
+    width: 400px;
+    height: 550px;
     border-radius: 20px;
     border: 18px solid #4f4f4f;
 }
@@ -120,11 +120,10 @@ body {
     grid-row: span 2;
 }
 
-/* dispositivos móveis */
 @media (max-width: 768px) {
     .grid-container {
-        width: 78vw;
-        height: 60vh;
+        width: 300px;
+        height: 420px;
     }
 
     #tela {
@@ -139,11 +138,10 @@ body {
     }
 }
 
-/* tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
     .grid-container {
-        width: 60vw;
-        height: 60vh;
+        width: 450px;
+        height: 600px;
         border: 25px solid #4f4f4f;
     }
 
@@ -159,7 +157,6 @@ body {
     }
 }
 
-/* estilos para dispositivos móveis e tablets */
 @media (max-width: 768px),
 (min-width: 768px) and (max-width: 1024px) {
     body {
