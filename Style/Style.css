@@ -136,7 +136,6 @@ body {
   body{
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
   }
 
   #tela {
@@ -151,6 +150,7 @@ body {
   }
 
   .link {
+    position: absolute;
     gap: 15px;
     right: 8vw;
     top: 4vh;
