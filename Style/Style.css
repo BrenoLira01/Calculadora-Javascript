@@ -149,6 +149,12 @@ body {
     border-radius: 25px;
   }
 
+  .link {
+    gap: 15px;
+    right: 8vw;
+    top: 4vh;
+  }
+
   .icon {
     width: 30px;
     height: 30px;
