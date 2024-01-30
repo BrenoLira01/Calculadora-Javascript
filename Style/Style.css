@@ -133,6 +133,11 @@ body {
     height: 450px;
   }
 
+  body{
+    height: 80vh;
+    width: 100vw;
+  }
+
   #tela {
     font-size: 3.5em;
   }
@@ -147,7 +152,7 @@ body {
   .link {
     position: absolute;
     justify-content: center;
-    top: 90%;
+    top: 80vh;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px;
