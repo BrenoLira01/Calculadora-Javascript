@@ -133,8 +133,8 @@ body {
     height: 450px;
   }
 
-  body{
-    height: 80vh;
+  body {
+    height: 100vh;
     width: 100vw;
   }
 
@@ -151,20 +151,19 @@ body {
 
   .link {
     position: absolute;
-    gap: 20px;
-    right: 50%;
-    top: 80vh;
-    transform: translateX(50%);
+    gap: 15px;
+    right: 8vw;
+    top: 4vh;
   }
-
+  
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 
   .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 15px;
   }
 }
