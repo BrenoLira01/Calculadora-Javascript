@@ -10,7 +10,7 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 2. Interaja com a calculadora pressionando os botões.
 
 <div align="center">
-  <img src="./imagens/Calculadora-imagem-2.jpg" alt="Calculadora">
+  <img src="./imagens/Calculadora-imagem-2.png" alt="Calculadora">
 </div>
 
 # Dificuldades Enfrentadas 💪
