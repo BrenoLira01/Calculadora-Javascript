@@ -7,20 +7,13 @@ botoesNumericos.forEach(function (button) {
         if (tela.value === "0") {
             tela.value = ""
         }
-
-        if (tela.value.length < 12) {
-            tela.value += button.innerText.trim();
-        }
+        tela.value += button.innerText.trim();
     });
 });
 
 let botaoPonto = document.querySelectorAll(".ponto");
 botaoPonto.forEach(function (botao) {
     botao.addEventListener("click", function () {
-
-        if (tela.value === "0") {
-            tela.value = tela.value += botao.innerText.trim();
-        }
 
         if (tela.value.includes(".")) {
             return;
@@ -34,11 +27,11 @@ botoesOperando.forEach(function (botao) {
     botao.addEventListener("click", function () {
 
         if (tela.value === "0") {
-            return;
+            tela.value = ""
         }
 
         let ultimoCaractere = tela.value.slice(-1);
-        let ultimoCaractereEOperador = "+-x/".includes(ultimoCaractere);
+        let ultimoCaractereEOperador = "+-x÷".includes(ultimoCaractere);
 
         if (!ultimoCaractereEOperador) {
             tela.value += botao.innerText.trim();
@@ -73,28 +66,31 @@ calcularNumero.addEventListener("click", calcular);
 
 function calcular() {
     let tela = document.getElementById("tela").value;
-    let ultimoCaractere = tela.slice(-1);
-    let ultimoCaractereEOperador = "+-x/".includes(ultimoCaractere);
 
-    let novaString = tela.replace(/x/g, "*");
+    let novaString1 = tela.replace(/x/g, "*");
+    let novaString2 = novaString1.replace(/÷/g, "/");
+    let novaStringFinal = novaString2;
 
-    if (!ultimoCaractereEOperador) {
-
-        let calcular = new Function('return ' + novaString);
+    try {
+        let calcular = new Function('return ' + novaStringFinal);
         let resultado = calcular();
         document.getElementById("tela").value = resultado;
 
         let resultadoString = resultado.toString();
 
-        if (resultadoString.length > 12) {
+        if (resultadoString.length > 10) {
             let resultadoEmNumero = resultado
             let resultadoFormatado = resultadoEmNumero.toFixed(2);
             let resultadoFinal = document.getElementById("tela");
             resultadoFinal.value = resultadoFormatado
         }
-    }
-    else {
-        let tela = document.getElementById("tela");
-        tela.value = tela.value.substring(0, tela.value.length - 1);
+    } catch (error) {
+        document.getElementById("tela").style.textAlign = "center";
+        document.getElementById("tela").value = " Error";
+
+        setTimeout(() => {
+            document.getElementById("tela").style.textAlign = "right";
+            document.getElementById("tela").value = "0";
+        }, 1000);
     }
 };
