@@ -85,12 +85,11 @@ function calcular() {
             resultadoFinal.value = resultadoFormatado
         }
     } catch (error) {
-        document.getElementById("tela").style.textAlign = "center";
-        document.getElementById("tela").value = " Error";
-
-        setTimeout(() => {
-            document.getElementById("tela").style.textAlign = "right";
-            document.getElementById("tela").value = "0";
-        }, 1000);
+        let tela = document.getElementById("tela");
+        tela.value = tela.value.substring(0, tela.value.length - 1);
+        
+        if (tela.value === "") {
+            tela.value = "0"
+        }
     }
 };
