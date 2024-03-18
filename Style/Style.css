@@ -1,11 +1,31 @@
 * {
-  box-sizing: border-box;
-  outline: 0;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 15pt Arial;
+  background-color: #0187cf;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  margin-top: 25px;
 }
 
 .grid-container {
+  background: #4f4f4f;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 8px;
@@ -13,60 +33,51 @@
   height: 550px;
   border-radius: 20px;
   border: 18px solid #4f4f4f;
-  background: #4F4F4F;
-  box-shadow: 0 12px 0 0 #3f3f3f;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0187CF;
-  height: 100vh;
-  width: 100vw;
+  box-shadow: 3px 3px 10px #00000089;
 }
 
 #tela {
+  font-size: 3.5em;
+  background-color: #2f2f2f;
   grid-column: span 4;
-  padding-right: 15px;
-  background-color: #2F2F2F;
-  font-size: 4em;
-  border-radius: 20px;
   height: 90%;
-  box-shadow: none;
+  padding-right: 15px;
   text-align: right;
+  border-radius: 20px;
+  box-shadow: none;
 }
 
 .button {
-  border-radius: 25px;
   background-color: #8d8c8c;
-  font: normal 2.5em Arial;
+  font-size: 2.2em;
   width: 97%;
   height: 97%;
   cursor: pointer;
+  border-radius: 25px;
+  box-shadow: none;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 0 0 #3f3f3f;
 }
 
 .button:active {
   transform: translateY(4px);
 }
 
+#botaoBack:hover,
 .button:hover {
-  background: #696969;
+  background: #5f5f5f;
 }
 
 .link {
   display: flex;
-  gap: 20px;
   position: fixed;
   top: 20px;
   right: 20px;
+  gap: 20px;
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
 }
 
 .social-icon {
@@ -75,8 +86,8 @@ body {
   align-items: center;
   background-color: #ffffff;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border: none;
   border-radius: 20px;
   transition: all 0.3s ease;
@@ -86,7 +97,6 @@ body {
   transform: scale(1.25);
 }
 
-
 #botaoBack {
   display: flex;
   justify-content: center;
@@ -94,8 +104,8 @@ body {
 }
 
 .back {
-  width: 45%;
-  height: 45%;
+  width: 53%;
+  height: 53%;
   position: relative;
   left: -3%;
 }
@@ -106,12 +116,12 @@ body {
 
 #botaoClean,
 #botaoResultado {
-  background-color: #E1813D;
+  background-color: #e1813d;
 }
 
 #botaoClean:hover,
 #botaoResultado:hover {
-  background: #AC602A;
+  background: #945325;
 }
 
 .button,
@@ -119,11 +129,6 @@ body {
   border: none;
   color: #ffffff;
   outline: 0;
-}
-
-#botaoBack:hover,
-.operando:hover {
-  background-color: #595959;
 }
 
 #botaoBack,
@@ -142,31 +147,32 @@ body {
 
 /* Estilos para dispositivos móveis (celulares e tablets) */
 @media only screen and (max-width: 767px) {
-  .grid-container {
-    width: 85vw;
-    height: 450px;
+  section {
+    margin-top: 100px;
   }
 
-  body {
-    height: 100vh;
-    width: 100vw;
+  section {
+    margin-top: 15vh;
+  }
+
+  .grid-container {
+    width: 90vw;
+    height: 470px;
   }
 
   #tela {
-    font-size: 3.5em;
+    font-size: 2.8em;
   }
 
   .button {
-    font-size: 2em;
+    font-size: 1.6em;
     width: 100%;
     height: 100%;
-    border-radius: 25px;
   }
 
   .link {
-    position: absolute;
     gap: 15px;
-    right: 8vw;
+    right: 5vw;
     top: 4vh;
   }
 
@@ -182,46 +188,54 @@ body {
   }
 }
 
-/* Estilos para tablets em modo paisagem */
-@media only screen and (max-width: 1024px) and (orientation: landscape) {
-  .grid-container {
-    width: 400px;
-    height: 540px;
-  }
-
-  #tela {
-    font-size: 3.5em;
-  }
-
-  .button {
-    font-size: 2em;
-    width: 100%;
-    height: 100%;
-  }
-
-  .link {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    top: 25%;
-    left: 90%;
-  }
-}
-
 /* Estilos para tablets em modo retrato */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  section {
+    margin-top: 150px;
+  }
+
   .grid-container {
-    width: 500px;
-    height: 650px;
-    border: 25px solid #4f4f4f;
+    width: 600px;
+    height: 770px;
+    border: 30px solid #4f4f4f;
   }
 
   #tela {
-    font-size: 5em;
+    font-size: 4.5em;
   }
 
   .button {
     font-size: 3em;
+    width: 97%;
+    height: 97%;
+    border-radius: 40px;
+  }
+
+  #botaoClean,
+  #botaoBack,
+  .operando {
+    border-radius: 50px;
+  }
+
+  .link {
+    gap: 20px;
+    right: 4vw;
+    top: 3vh;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icon {
+    width: 63px;
+    height: 63px;
+    border-radius: 20px;
+  }
+
+  footer {
+    font-size: 1.4em;
+    margin-top: 40px;
   }
 }
