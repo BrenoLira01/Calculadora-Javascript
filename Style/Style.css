@@ -14,14 +14,14 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 footer {
   color: #fff;
   text-align: center;
   font-style: italic;
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 .grid-container {
@@ -145,14 +145,14 @@ footer {
   grid-row: span 2;
 }
 
-/* Estilos para dispositivos móveis (celulares e tablets) */
+/* Estilos para dispositivos móveis (celulares) */
 @media only screen and (max-width: 767px) {
   section {
     margin-top: 5vh;
   }
 
   .grid-container {
-    width: 90vw;
+    width: 88vw;
     height: 470px;
   }
 
@@ -184,7 +184,7 @@ footer {
   }
 
   footer {
-    margin-top: 40px;
+    margin-top: 25px;
   }
 }
 
