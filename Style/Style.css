@@ -142,12 +142,12 @@ footer {
 /* Estilos para dispositivos móveis (celulares) */
 @media only screen and (max-width: 767px) {
   section {
-    margin-top: 3vh;
+    margin-top: 4vh;
   }
 
   .grid-container {
     width: 90vw;
-    height: 485px;
+    height: 475px;
   }
 
   #tela {
@@ -162,7 +162,7 @@ footer {
 
   .link {
     gap: 15px;
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-right: 5vw;
   }
 
@@ -172,7 +172,8 @@ footer {
   }
 
   footer {
-    margin-top: 25px;
+    font-size: 0.8em;
+    margin-top: 15px;
   }
 }
 
