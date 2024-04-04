@@ -1,16 +1,12 @@
-![Calculadora JavaScript](./imagens/Calculadora-JavaScript-2.png)
+![Calculadora JavaScript](./imagens/Calculadora-JavaScript.png)
 
 # Introdução
 
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
 
-## 👀 Ver projeto
+# 👀 Ver projeto
 
 Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
-
-<div align="center">
-  <img src="./imagens/Calculadora-imagem-2.png" alt="Calculadora">
-</div>
 
 # Dificuldades Enfrentadas 💪
 
