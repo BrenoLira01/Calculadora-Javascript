@@ -142,7 +142,7 @@ footer {
 /* Estilos para dispositivos móveis (celulares) */
 @media only screen and (max-width: 767px) {
   section {
-    margin-top: 4vh;
+    margin-top: 3.4vh;
   }
 
   .grid-container {
