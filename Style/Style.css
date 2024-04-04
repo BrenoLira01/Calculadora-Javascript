@@ -76,20 +76,14 @@ footer {
 }
 
 .icon {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
 }
 
 .social-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
+  background-color: transparent;
   cursor: pointer;
-  width: 55px;
-  height: 55px;
   border: none;
-  border-radius: 20px;
   transition: all 0.3s ease;
 }
 
@@ -148,12 +142,12 @@ footer {
 /* Estilos para dispositivos móveis (celulares) */
 @media only screen and (max-width: 767px) {
   section {
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
 
   .grid-container {
-    width: 88vw;
-    height: 470px;
+    width: 90vw;
+    height: 485px;
   }
 
   #tela {
@@ -168,19 +162,13 @@ footer {
 
   .link {
     gap: 15px;
-    margin-top: 4vh;
+    margin-top: 2vh;
     margin-right: 5vw;
   }
 
   .icon {
-    width: 33px;
-    height: 33px;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 15px;
+    width: 30px;
+    height: 30px;
   }
 
   footer {
