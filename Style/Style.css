@@ -25,7 +25,7 @@ footer {
 }
 
 .grid-container {
-  background: #0187cf;
+  background: #4f4f4f;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 8px;
