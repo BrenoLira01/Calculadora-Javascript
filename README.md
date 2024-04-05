@@ -4,9 +4,13 @@
 
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
 
-# 👀 Ver projeto
+## 👀 Ver projeto
 
 Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
+
+## Demonstração do Projeto
+
+![Imagem de Exemplo](./imagens/demonstração.gif)
 
 # Dificuldades Enfrentadas 💪
 
