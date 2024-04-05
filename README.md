@@ -1,61 +1,65 @@
 ![Calculadora JavaScript](./imagens/Calculadora-JavaScript.png)
 
-# Introdução
+## Índice:
+- [Como impedir a repetição do ponto](#como-impedir-a-repetição-do-ponto)
+- [Como evitar a adição de operadores consecutivos](#como-evitar-a-adição-de-operadores-consecutivos)
+- [Como implementar notação científica](#como-implementar-notação-científica)
 
+## Introdução
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
 
-## 👀 Ver projeto
+## Dificuldades Enfrentadas 💪
+A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
 
+## 👀 Ver projeto
 Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
 
 ## Demonstração do Projeto
-
 ![Imagem de Exemplo](./imagens/demonstração.gif)
 
-# Dificuldades Enfrentadas 💪
-
-A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
-
-## Como impedir a repetição do ponto ? 🤔
-
-Neste trecho de código, verificamos se já existe um ponto na tela com o método `includes()`. Isso impede a adição de mais de um ponto decimal quando o botão de ponto é clicado.
+## Como impedir a repetição do ponto?
+Neste trecho de código vamos usar o método `includes()` pra checar se existe um ponto na tela, juntamente com uma estrutura de controle, __if__ e __else__.
 
 ![Inclui ponto](./imagens/readme/includes-ponto.png)
 
-Essa abordagem visa evitar a entrada de números inválidos, garantindo que apenas um ponto decimal seja adicionado à tela.
+Caso tenha, o __return;__ vai impedir que outro ponto seja adicionado.
 
-![Inclui ponto](./imagens/readme/Escrever-ponto.png)
-
-## Como evitar a adição de operadores consecutivos ? 🤔
-
-Neste trecho, obtemos o último caractere da tela para determinar se é um operador. Isso é realizado utilizando o método `slice()` seguido pelo `includes()`.
+## Como evitar a adição de operadores consecutivos?
+Pra isso vamos obter o último caractere da tela utilizando o método `slice()`. Em seguida, usamos o método `includes()` para verificar se ele é um operador.
 
 ![Slice e inclui operador](./imagens/readme/slice-includes-operador.png)
 
-Posteriormente, com o uso de `if` e `else`, verificamos se o último caractere na tela é um operador. Caso seja, permitimos a substituição, possibilitando a troca de um operador por outro, se necessário.
+Agora vamos usar a estrutura de controle `if` e `else` para permitir a substituição caso necessário.
+
+Também vamos usar o método `slice(0, -1)`. Mas o que ele faz?
+
+ Ele selecionando todos os caracteres da string, exceto o último. Ou seja, é como se estivéssemos apagando o último caractere.
 
 ![Botão de operação](./imagens/readme/Botão-de-operação.png)
 
-## Como implementar notação científica ? 🤔
+## Como implementar notação científica?
+Para aplicarmos a notação científica, é necessário definir um limite de tamanho para o resultado.
 
-Para isso, vamos converter o resultado em uma string utilizando `.toString()`, a fim de obter seu tamanho. Isso nos permite verificar se ele ultrapassa 12 caracteres.
+por exemplo:
+
+Fazendo o calculo 9,6 x 3 = 28.799999999999997, temos o resultado de __18 caracteres__. Para que o resultado não seja tão grande podemos usar uma estrutura de controle como __if__ e __else__.
+
+Vamos colocar um limite de __10 caracteres__, quando ele for ultrapassado, sera feita a notação.
+
+Mas antes precisamos converter o resultado para __string__ para obtermos o seu tamanho. Podemos fazer isso utilizando o método `.toString()`. Assim podemos saber quantos caracteres tem o resultado.
 
 ![To string](./imagens/readme/to.string.png)
 
-Se for maior, utilizamos o método `.toFixed()` para limitar o resultado a duas casas decimais, e em seguida o adicionamos à tela.
+Agora vamos definir um limite de __10 caracteres__. Também utilizaremos o método `toFixed()` para formatar o resultado em uma casa decimal.
 
 ![To fixed](./imagens/readme/to.fixed.png)
 
-Decidi utilizar a função `new Function()` em lugar de `eval()` por razões de segurança.
-
-![Função calcular](./imagens/readme/Função-calcular.png)
+Com isso, temos 9,6 x 3 = __28.8__
 
 ## 🧠 Tecnologias Utilizadas
-
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## 🔍 Fontes
-
 Os elementos adicionados ou modificados neste projeto foram obtidos de diversas fontes. Abaixo está a lista de onde cada elemento foi encontrado:
 
 - **Ícone de apagar**: Fonte: <a href="https://icon-icons.com/pt/icone/retrocesso/152694" title="retrocesso ícones">Ícones criados por Tailwind Labs - icon-icons</a>
@@ -65,18 +69,14 @@ Os elementos adicionados ou modificados neste projeto foram obtidos de diversas 
 Agradeço aos criadores originais por disponibilizarem esses recursos.
 
 ## 🌱 Contribuições
-
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
 
 ## Autor
-
 Feito por [Francisco Breno](https://www.linkedin.com/in/breno-lira-perfil).
 
 ## 📫 Contato
-
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
 
 ## 📄 Licença
-
 Este projeto é licenciado sob os termos da [Licença MIT](/LICENSE.txt).
 Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença MIT.
