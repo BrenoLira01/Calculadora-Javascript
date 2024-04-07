@@ -4,12 +4,11 @@ let tela = document.getElementById("tela");
 let botoesNumericos = document.querySelectorAll(".numero");
 botoesNumericos.forEach(function (button) {
   button.addEventListener("click", function () {
-
-   // Apaga o zero inicial.
-    if (tela.value === "0") { 
+    // Apaga o zero inicial.
+    if (tela.value === "0") {
       tela.value = "";
     }
-      tela.value += button.innerText.trim();
+    tela.value += button.innerText.trim();
   });
 });
 
@@ -18,18 +17,24 @@ let botaoPonto = document.querySelector(".ponto");
 botaoPonto.addEventListener("click", escreverPonto);
 
 function escreverPonto() {
-    if (tela.value.includes(".")) {
-      return;
-    } else {
-      tela.value += botaoPonto.innerText.trim();
-    }
+  // Verifica se já possui um ponto na tela.
+
+  // Se verdadeiro, não será adicionado.
+  if (tela.value.includes(".")) {
+    return;
+    //return vai encerra a execução da função.
+  }
+  // Caso contrário o ponto é adicionado.
+  else {
+    tela.value += botaoPonto.innerText.trim();
+    //O trim() é apenas pra remover espaços em branco de uma string
+  }
 }
 
 // Função escrever botões de operação.
 let botoesOperando = document.querySelectorAll(".operando");
 botoesOperando.forEach(function (botao) {
   botao.addEventListener("click", function () {
-
     if (tela.value === "0") {
       tela.value = "";
     }
@@ -40,15 +45,13 @@ botoesOperando.forEach(function (botao) {
     // Verifica se ele é um operador.
     let CaractereOperador = "+-x÷".includes(ultimoCaractere);
 
-     // Substituir operador por outro.
+    // Se sim, será substituido por outro.
     if (CaractereOperador) {
-
-      // Slice(0, -1) vai apagar o último caractere.
       tela.value = tela.value.slice(0, -1);
+      // Slice(0, -1) vai apagar o último caractere.
 
-      // Em seguida adicionamos um novo.
       tela.value += botao.innerText.trim();
-
+      // Em seguida adicionamos um novo.
     } else {
       tela.value += botao.innerText.trim();
     }
@@ -82,24 +85,31 @@ calcularNumero.addEventListener("click", calcular);
 function calcular() {
   let tela = document.getElementById("tela").value;
 
-  // Troca x e ÷ por * e / para que o calculo sejá realizado corretamente.
+  // Troca x e ÷ por * e / para que o cálculo sejá realizado corretamente.
   let multiplicação = tela.replace(/x/g, "*");
   let divisão = multiplicação.replace(/÷/g, "/");
   let formataçãoFinal = divisão;
 
+  // O new Function vai realizar o cálculo :)
   try {
     let calcular = new Function("return " + formataçãoFinal);
     let resultado = calcular();
     document.getElementById("tela").value = resultado;
 
- // Verifica se ele possui o tamanho maior que 10 caracteres para notação científica.
+    // Implementar notação científica.
+
+    // Converter resultado em uma string.
     let resultadoString = resultado.toString();
+
+    // Verifica se ele possui o tamanho maior que 10 caracteres.
     if (resultadoString.length > 10) {
       let resultadoFormatado = resultado.toFixed(1);
+      // O toFixed(1) vai formatar o resultado com uma casa decimal.
+
+      // Adiciona o resultado formatado a tela.
       let tela = document.getElementById("tela");
       tela.value = resultadoFormatado;
     }
-
   } catch (error) {
     alert(
       "[ERRO] Desculpe, ocorreu um erro durante o cálculo. Por favor, verifique os dados inseridos e tente novamente."
