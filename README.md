@@ -27,34 +27,34 @@ Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
 Primeiro vamos utilizar o método `includes()`, esse método vai checar se existe um ponto na tela. Em seguida vamos usar uma estrutura de controle `if` e `else` para impedir a inserção do ponto.
 
 Exemplo:
-![Inclui ponto](./imagens/readme/includes-ponto.png)
+![includes ponto](./imagens/readme/includes-ponto.png)
 
 Ou seja, se existe um ponto na tela sua inserção será impedida.
 
 Em seguida vamos pegar <span style="color: lightblue;">"tela.value"</span>, valor de tela, e vamos adicionar o botão ponto, <span style="color: lightblue;">"botaoPonto.innerText"</span>
 
 Exemplo:
-![Inclui ponto](./imagens/readme/escrever-ponto.png)
+![escrever ponto](./imagens/readme/escrever-ponto.png)
 
 Resumindo, ficaria assim:
-
-![Inclui ponto](./imagens/readme/função-ponto.png)
+![função ponto](./imagens/readme/função-ponto.png)
 
 ## Como evitar a adição de operadores consecutivos?
 
 Pra isso vamos obter o último caractere da tela utilizando o método `slice()`. Em seguida, usamos o método `includes()` para verificar se ele é um operador.
 
-![Slice e inclui operador](./imagens/readme/slice-includes-operador.png)
+Exemplo:
+![slice e inclui operador](./imagens/readme/slice-includes-operador.png)
 
 Agora que temos o último caractere e sabemos se ele é um operador vamos usar a estrutura de controle`if` e `else` para permitir a substituição caso necessário.
 
-![Botão de operação](./imagens/readme/checar-operação.png)
+Exemplo:
+![checar operação](./imagens/readme/checar-operação.png)
 
 O trecho <span style="color: lightblue;">"slice(0, -1)"</span> seleciona todos os caracteres da string, exceto o último. Ou seja, é como se estivéssemos apagando o último caractere.
 
 Resumindo, ficaria assim:
-
-![Botão de operação](./imagens/readme/função-operação.png)
+![função operação](./imagens/readme/função-operação.png)
 
 ## Como implementar notação científica?
 
@@ -69,15 +69,16 @@ Vamos colocar um limite de <span style="color: lightblue;">10 caracteres</span>,
 
 Mas antes precisamos converter o resultado do calculo para string para obtermos o seu tamanho. Podemos fazer isso utilizando o método `.toString()`. Assim podemos saber quantos caracteres tem o resultado.
 
-![To string](./imagens/readme/to.string.png)
+Exemplo:
+![to string](./imagens/readme/to.string.png)
 
 Agora vamos definir um limite de **10 caracteres**. Também utilizaremos o método `toFixed()` para formatar o resultado em uma casa decimal.
 
-![To fixed](./imagens/readme/to.fixed.png)
+Exemplo:
+![to fixed](./imagens/readme/to.fixed.png)
 
 Resumindo, ficaria assim:
-
-![To fixed](./imagens/readme/notação-científica.png)
+![notação científica](./imagens/readme/notação-científica.png)
 
 Com isso, temos 9,6 x 3 = **28.8**
 
