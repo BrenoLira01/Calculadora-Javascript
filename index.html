@@ -4,22 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>calculadora js</title>
-    <meta
-      name="description"
-      content="Calculadora javaScript desenvolvida para proporcionar uma experiência de usuário intuitiva e fácil de usar!"
-    />
     <link rel="icon" href="imagens/icon.png" />
     <link rel="stylesheet" href="./Style/Style.css" />
   </head>
   <body>
-      <div class="link">
+    <div class="social-icons-container">
       <a
         href="https://github.com/BrenoLira01"
         target="_blank"
         rel="noopener noreferrer"
       >
         <button class="social-icon" aria-label="Ir para o GitHub">
-          <img src="./imagens/Github.svg" alt="GitHub" class="icon" />
+          <img src="./imagens/Github.svg" alt="GitHub" id="GitHub" />
         </button>
       </a>
       <a
@@ -28,12 +24,12 @@
         rel="noopener noreferrer"
       >
         <button class="social-icon" aria-label="Ir para o LinkedIn">
-          <img src="./imagens/Linkedin.svg" alt="LinkedIn" class="icon" />
+          <img src="./imagens/Linkedin.svg" alt="LinkedIn" id="Linkedin" />
         </button>
       </a>
     </div>
     <section>
-      <div class="grid-container">
+      <div class="calculator-container">
         <input
           type="text"
           id="tela"
@@ -41,10 +37,9 @@
           readonly
           aria-label="Valor da Calculadora"
         />
-
         <button class="button" id="botaoClean">c</button>
         <button class="button" id="botaoBack">
-          <img src="./imagens/apagar.svg" alt="apagar" class="back" />
+          <img src="./imagens/apagar.svg" alt="apagar" id="botaoBack-img" />
         </button>
         <button class="button operando">÷</button>
         <button class="button operando">x</button>

@@ -24,7 +24,32 @@ footer {
   margin-top: 35px;
 }
 
-.grid-container {
+.social-icons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 3vh;
+  margin-right: 2vw;
+}
+
+.social-icon {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.25);
+}
+
+#GitHub,
+#Linkedin {
+  width: 44px;
+  height: 44px;
+}
+
+.calculator-container {
   background: #4f4f4f;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -39,78 +64,74 @@ footer {
 #tela {
   font-size: 3.5em;
   background-color: #2f2f2f;
+  color: #ffffff;
   grid-column: span 4;
   height: 90%;
   padding-right: 15px;
   text-align: right;
   border-radius: 20px;
+  border: none;
   box-shadow: none;
+  outline: 0;
 }
 
 .button {
   background-color: #8d8c8c;
+  color: #ffffff;
   font-size: 2.2em;
   width: 97%;
   height: 97%;
   cursor: pointer;
   border-radius: 25px;
+  border: none;
   box-shadow: none;
   transition: all 0.4s ease;
+  outline: 0;
+}
+
+.button:hover {
+  background: #5f5f5f;
 }
 
 .button:active {
   transform: translateY(4px);
 }
 
-#botaoBack:hover,
-.button:hover {
-  background: #5f5f5f;
-}
-
-.link {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  margin-top: 3vh;
-  margin-right: 2vw;
-}
-
-.icon {
-  width: 44px;
-  height: 44px;
-}
-
-.social-icon {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.25);
-}
-
 #botaoBack {
+  background-color: #747474;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 40px;
 }
 
-.back {
+#botaoBack:hover {
+  background: #5f5f5f;
+}
+
+#botaoBack-img {
   width: 53%;
   height: 53%;
   position: relative;
   left: -3%;
 }
 
-#botaoClean {
+.operando {
+  background-color: #747474;
   border-radius: 40px;
 }
 
-#botaoClean,
+#botaoClean {
+  background-color: #e1813d;
+  border-radius: 40px;
+}
+
 #botaoResultado {
   background-color: #e1813d;
+}
+
+#botaoResultado {
+  grid-row: span 2;
 }
 
 #botaoClean:hover,
@@ -118,25 +139,8 @@ footer {
   background: #945325;
 }
 
-.button,
-#tela {
-  border: none;
-  color: #ffffff;
-  outline: 0;
-}
-
-#botaoBack,
-.operando {
-  background-color: #747474;
-  border-radius: 40px;
-}
-
 #botaoZero {
   grid-column: span 2;
-}
-
-#botaoResultado {
-  grid-row: span 2;
 }
 
 /* Estilos para dispositivos móveis (celulares) */
@@ -145,7 +149,24 @@ footer {
     margin-top: 3.4vh;
   }
 
-  .grid-container {
+  footer {
+    font-size: 0.8em;
+    margin-top: 25px;
+  }
+
+  .social-icons-container {
+    gap: 15px;
+    margin-top: 4vh;
+    margin-right: 5vw;
+  }
+
+  #GitHub,
+  #Linkedin {
+    width: 35px;
+    height: 35px;
+  }
+
+  .calculator-container {
     width: 90vw;
     height: 475px;
   }
@@ -159,22 +180,6 @@ footer {
     width: 100%;
     height: 100%;
   }
-
-  .link {
-    gap: 15px;
-    margin-top: 4vh;
-    margin-right: 5vw;
-  }
-
-  .icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  footer {
-    font-size: 0.8em;
-    margin-top: 15px;
-  }
 }
 
 /* Estilos para tablets em modo retrato */
@@ -183,7 +188,17 @@ footer {
     margin-top: 70px;
   }
 
-  .grid-container {
+  footer {
+    font-size: 1.4em;
+    margin-top: 40px;
+  }
+
+  .social-icons-container {
+    gap: 20px;
+    margin-right: 4.5vw;
+  }
+
+  .calculator-container {
     width: 600px;
     height: 770px;
     border: 30px solid #4f4f4f;
@@ -204,15 +219,5 @@ footer {
   #botaoBack,
   .operando {
     border-radius: 50px;
-  }
-
-  .link {
-    gap: 20px;
-    margin-right: 4.5vw;
-  }
-
-  footer {
-    font-size: 1.4em;
-    margin-top: 40px;
   }
 }
