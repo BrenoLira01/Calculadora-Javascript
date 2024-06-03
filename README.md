@@ -6,12 +6,6 @@ Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi d
 
 Clique [aqui](https://brenolira01.github.io/Calculadora-Javascript/) para ver o projeto.
 
-## Índice:
-
-- [Como impedir a repetição do ponto](#como-impedir-a-repetição-do-ponto)
-- [Como evitar a adição de operadores consecutivos](#como-evitar-a-adição-de-operadores-consecutivos)
-- [Como implementar notação científica](#como-implementar-notação-científica)
-
 ## Dificuldades Enfrentadas
 
 A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
@@ -54,8 +48,6 @@ if (tela.value.includes(".")) {
   }
 ```
 </details>
-
-<br>
 
 <details>
 
@@ -108,8 +100,6 @@ if (substituirOperador) {
 
 </details>
 
-<br>
-
 <details>
 
   <summary>Como implementar notação científica</summary>
@@ -136,7 +126,6 @@ let resultadoString = resultado.toString();
 Agora vamos definir um limite de **10 caracteres**. Também utilizaremos o método `toFixed()` para formatar o resultado em uma casa decimal.
 
 Exemplo:
-![to fixed](./imagens/readme/to.fixed.png)
 
 ```javascript
 if (resultadoString.length > 10) {
@@ -144,35 +133,15 @@ if (resultadoString.length > 10) {
     }
 ```
 
-Em seguida adicionamos a tela.
-
-```javascript
-  document.getElementById("tela").value = resultado;
-```
-
-Código completo:
-
-```javascript
-  let resultadoString = resultado.toString();
-
-    if (resultadoString.length > 10) {
-      resultado = resultado.toFixed(1);
-    }
-    
-    document.getElementById("tela").value = resultado;
-```
-
 Com isso, temos 9,6 x 3 = **28.8**
 
 </details>
 
-
-
-## 🧠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-## 🔍 Fontes
+## Fontes
 
 Os elementos adicionados ou modificados neste projeto foram obtidos de diversas fontes. Abaixo está a lista de onde cada elemento foi encontrado:
 
@@ -182,7 +151,7 @@ Os elementos adicionados ou modificados neste projeto foram obtidos de diversas 
 
 Agradeço aos criadores originais por disponibilizarem esses recursos.
 
-## 🌱 Contribuições
+## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e solicitações de pull para melhorar este projeto.
 
@@ -190,11 +159,11 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e soli
 
 Feito por [Francisco Breno](https://www.linkedin.com/in/breno-lira-perfil).
 
-## 📫 Contato
+## Contato
 
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:franciscobrenolira@gmail.com)
+[Email](mailto:franciscobrenolira@gmail.com)
 
-## 📄 Licença
+## Licença
 
 Este projeto é licenciado sob os termos da [Licença MIT](/LICENSE.txt).
 Leia o arquivo [LICENSE](/LICENSE.txt) para obter mais detalhes sobre as permissões e restrições da Licença MIT.
