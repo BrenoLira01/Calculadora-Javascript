@@ -4,83 +4,169 @@
 
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
 
+Clique [aqui](https://brenolira01.github.io/Calculadora-Javascript/) para ver o projeto.
+
 ## Índice:
 
 - [Como impedir a repetição do ponto](#como-impedir-a-repetição-do-ponto)
 - [Como evitar a adição de operadores consecutivos](#como-evitar-a-adição-de-operadores-consecutivos)
 - [Como implementar notação científica](#como-implementar-notação-científica)
 
-## Dificuldades Enfrentadas 💪
+## Dificuldades Enfrentadas
 
 A parte mais desafiadora foi impedir a repetição do ponto e evitar a adição de operadores consecutivos. Além disso, a implementação da notação científica.
 
-## Ver projeto 👀
+<details>
+  <summary>Como impedir a repetição do ponto</summary>
+  
+## Como impedir a repetição do ponto
 
-Acesse o link [aqui](https://brenolira01.github.io/Calculadora-Javascript/).
-
-## Demonstração do Projeto
-
-![Imagem de Exemplo](./imagens/demonstração.gif)
-
-## Como impedir a repetição do ponto?
-
-Primeiro vamos utilizar o método `includes()`, esse método vai checar se existe um ponto na tela. Em seguida vamos usar uma estrutura de controle `if` e `else` para impedir a inserção do ponto.
+Primeiro precisamos checar se já existe ponto na tela. Pra isso, vamos utilizar o método `includes()`.
 
 Exemplo:
-![includes ponto](./imagens/readme/includes-ponto.png)
 
-Ou seja, se existe um ponto na tela sua inserção será impedida.
+```javascript
+tela.value.includes(".")
+```
 
-Em seguida vamos pegar <span style="color: lightblue;">"tela.value"</span>, valor de tela, e vamos adicionar o botão ponto, <span style="color: lightblue;">"botaoPonto.innerText"</span>
-
-Exemplo:
-![escrever ponto](./imagens/readme/escrever-ponto.png)
-
-Resumindo, ficaria assim:
-![função ponto](./imagens/readme/função-ponto.png)
-
-## Como evitar a adição de operadores consecutivos?
-
-Pra isso vamos obter o último caractere da tela utilizando o método `slice()`. Em seguida, usamos o método `includes()` para verificar se ele é um operador.
+Em seguida vamos usar uma estrutura de controle `if` e `else`.
 
 Exemplo:
-![slice e inclui operador](./imagens/readme/slice-includes-operador.png)
+
+```javascript
+if (tela.value.includes(".")) {
+    return; 
+  } else {
+    tela.value += ponto.innerText;
+  }
+```
+O `return` serve para encerrar a execução da função, impedindo a inserção do ponto. E o ``else`` é pra caso o contrário o código segue normalmente.
+
+Código completo:
+
+```javascript
+tela.value.includes(".")
+
+if (tela.value.includes(".")) {
+    return; 
+  } else {
+    tela.value += ponto.innerText;
+  }
+```
+</details>
+
+<br>
+
+<details>
+
+  <summary>Como evitar a adição de operadores consecutivos</summary>
+  
+## Como evitar a adição de operadores consecutivos
+
+Pra isso vamos obter o último caractere da tela utilizando o método `slice()`.
+
+```javascript
+// Obtêm o último caractere.
+let ultimoCaractere = tela.value.slice(-1);
+```
+
+ Em seguida, usamos o método `includes()` para verificar se ele é um operador.
+
+```javascript
+// verifica se ele é um operador.
+let substituirOperador = "+-x÷".includes(ultimoCaractere);
+```
 
 Agora que temos o último caractere e sabemos se ele é um operador vamos usar a estrutura de controle`if` e `else` para permitir a substituição caso necessário.
 
 Exemplo:
-![checar operação](./imagens/readme/checar-operação.png)
 
-O trecho <span style="color: lightblue;">"slice(0, -1)"</span> seleciona todos os caracteres da string, exceto o último. Ou seja, é como se estivéssemos apagando o último caractere.
+```javascript
+if (substituirOperador) {
+      tela.value = tela.value.slice(0, -1) + botao.innerText;
+    } else {
+      tela.value += botao.innerText;
+    }
+```
+O trecho ``.slice(0, -1)`` seleciona todos os caracteres da String, exceto o último. É como se estivéssemos apagando o último caractere da tela. Em seguida o ``+ botao.innerText`` coloca um novo.
 
-Resumindo, ficaria assim:
-![função operação](./imagens/readme/função-operação.png)
+O ``else`` é pra caso o contrário o código segue normalmente.
 
-## Como implementar notação científica?
+Código completo:
+
+```javascript
+let ultimoCaractere = tela.value.slice(-1);
+
+let substituirOperador = "+-x÷".includes(ultimoCaractere);
+
+if (substituirOperador) {
+      tela.value = tela.value.slice(0, -1) + botao.innerText;
+    } else {
+      tela.value += botao.innerText;
+    }
+```
+
+</details>
+
+<br>
+
+<details>
+
+  <summary>Como implementar notação científica</summary>
+  
+## Como implementar notação científica
 
 <span style="color: lightblue;"></span>
 Para aplicarmos a notação científica, é necessário definir um limite de tamanho para o resultado.
 
 por exemplo:
 
-Fazendo o calculo 9,6 x 3 = 28.799999999999997, temos o resultado de <span style="color: lightblue;">18 caracteres</span>. Para que o resultado não seja tão grande podemos usar uma estrutura de controle como `if` e `else`.
+Fazendo o calculo 9,6 x 3 = 28.799999999999997, temos o resultado de ``18 caracteres``. Para que o resultado não seja tão grande podemos usar uma estrutura de controle como `if` e `else`.
 
-Vamos colocar um limite de <span style="color: lightblue;">10 caracteres</span>, quando ele for ultrapassado, sera feita a notação científica.
+Vamos colocar um limite de ``10 caracteres``, quando ele for ultrapassado, sera feita a notação científica.
 
-Mas antes precisamos converter o resultado do calculo para string para obtermos o seu tamanho. Podemos fazer isso utilizando o método `.toString()`. Assim podemos saber quantos caracteres tem o resultado.
+Mas antes precisamos converter o resultado do calculo para string para obtermos o seu tamanho utilizando `.toString()`. Assim podemos saber quantos caracteres tem o resultado.
 
 Exemplo:
-![to string](./imagens/readme/to.string.png)
+
+```javascript
+let resultadoString = resultado.toString();
+```
 
 Agora vamos definir um limite de **10 caracteres**. Também utilizaremos o método `toFixed()` para formatar o resultado em uma casa decimal.
 
 Exemplo:
 ![to fixed](./imagens/readme/to.fixed.png)
 
-Resumindo, ficaria assim:
-![notação científica](./imagens/readme/notação-científica.png)
+```javascript
+if (resultadoString.length > 10) {
+      resultado = resultado.toFixed(1);
+    }
+```
+
+Em seguida adicionamos a tela.
+
+```javascript
+  document.getElementById("tela").value = resultado;
+```
+
+Código completo:
+
+```javascript
+  let resultadoString = resultado.toString();
+
+    if (resultadoString.length > 10) {
+      resultado = resultado.toFixed(1);
+    }
+    
+    document.getElementById("tela").value = resultado;
+```
 
 Com isso, temos 9,6 x 3 = **28.8**
+
+</details>
+
+
 
 ## 🧠 Tecnologias Utilizadas
 
